@@ -1,0 +1,39 @@
+* BOXOR
+  Let the gaims begin (is jus gaim)
+** desc
+   goal: KO opponent
+   each person gets two boxing hands
+   1v1 in the ring (no ropes, only void)
+** ctrls
+   wasd to move
+   q/e to rotate
+   j/k for left/right punch
+** notes
+   movement of character shouldn't be based on physics
+   optimal if fists don't affect main box
+   perhaps create invisible static bodies that remain fixed relative to main box
+   fist bodies can attach to these so joint effect still present
+** todo
+*** DONE figure out box2d header file inclusion
+*** DONE make complete structure of code w/o implementation, then compile/link
+- find out why it can't compile (error: undefined symbs, "typeinfo for Player", referenced from typeinfo for P1 in p1.cpp.o)
+  - [X] fixed, had to add =0 to make function pure virtual, to indicate player is a interface
+*** implement most basic form (square w wasd capabilities on grid) 
+- [X] o shit, drop test works
+- does the alpha scaling work?, yup, make sure variables are floats to not round to 0
+- [X] make box (four corners) drop test
+- [X] implement rendering four corners with variable angle
+  - draw diagram
+- [X] make ground (edge shape, static)
+  - got the edge set up (pointed by ground), just needs to render properly
+  - it kind of worked, collision doesn't line up.
+- [X] made box outline (render lines)
+- [ ] speed cap, for better control (acc/decc fast), using variant maxForce in friction joint
+- [X] create a world class
+- [X] create friction joint in world class
+- 
+*** add in fists, figure out joint mechanics
+- thinking prismatic or prismatic + distance combo
+- [ ] duplicate v1.0 to make v1.1 
+- 
+*** TODO maybe learn git before doing manual version control

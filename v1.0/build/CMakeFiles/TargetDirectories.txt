@@ -1,0 +1,8 @@
+/Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles/rebuild_cache.dir
+/Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles/edit_cache.dir
+/Users/joshli/gaims/arcade/boxor/v1.0/build/Box2D/CMakeFiles/rebuild_cache.dir
+/Users/joshli/gaims/arcade/boxor/v1.0/build/Box2D/CMakeFiles/edit_cache.dir
+/Users/joshli/gaims/arcade/boxor/v1.0/build/Box2D/CMakeFiles/Box2D.dir
+/Users/joshli/gaims/arcade/boxor/v1.0/build/source/CMakeFiles/rebuild_cache.dir
+/Users/joshli/gaims/arcade/boxor/v1.0/build/source/CMakeFiles/edit_cache.dir
+/Users/joshli/gaims/arcade/boxor/v1.0/build/source/CMakeFiles/BOXOR.dir
