@@ -34,6 +34,5 @@
 - 
 *** add in fists, figure out joint mechanics
 - thinking prismatic or prismatic + distance combo
-- [ ] duplicate v1.0 to make v1.1 
-- 
+  - [ ] create fist1/2 bodies, create prismaticJoints, then render 
 *** maybe learn git before doing manual version control

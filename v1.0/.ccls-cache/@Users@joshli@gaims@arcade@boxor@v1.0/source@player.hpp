@@ -7,7 +7,8 @@ class Player {	// interface for two p1 and p2
 
   public:
 	
-	b2Body * body;
+	b2Body * body, * fist1, * fist2;
+	b2PrismaticJointDef prismaticJointDef;
 	// does there need to be a constructor?
 	// Player();
 	

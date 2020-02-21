@@ -49,6 +49,21 @@ P1::P1(World * worldRef) {	// does this allow P1's body to be created?
 	fd.shape = &psh;
 	body->CreateFixture(&fd);
 	
+	// create fist1 and fist2 here
+
+	prismaticJointDef1.bodyA = body; 
+	prismaticJointDef1.bodyB = fist1; 
+	prismaticJointDef1.collideConnected = false; 
+	prismaticJointDef1.localAxisA.Set(0, 1); 
+	// set localAnchorA and B later, assume its center of body for now 
+	
+	prismaticJointDef1.bodyA = body; 
+	prismaticJointDef2.bodyB = fist2; 
+	prismaticJointDef2.collideConnected = false; 
+	prismaticJointDef2.localAxisA.Set(0, 1); 
+	
+	// create prismaticJoints here
+	
 	keyW = 0;
 	keyA = 0;
 	keyS = 0;
