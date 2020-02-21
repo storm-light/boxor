@@ -36,4 +36,4 @@
 - thinking prismatic or prismatic + distance combo
 - [ ] duplicate v1.0 to make v1.1 
 - 
-*** TODO maybe learn git before doing manual version control
+*** maybe learn git before doing manual version control
