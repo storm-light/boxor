@@ -34,6 +34,11 @@
 - 
 *** add in fists, figure out joint mechanics
 - thinking prismatic or prismatic + distance combo
-- [ ] duplicate v1.0 to make v1.1 
-- 
-*** TODO maybe learn git before doing manual version control
+  - [X] create fist1/2 bodies, create prismaticJoints, then render 
+  - used prismatic joint translation limits!
+  - could potentially create another version to see if revolute joints can work as well
+- [ ] add fist impulse input (punching)
+- could do several things to make mechanics better
+  - remove main body from collision with just fist collision (and only fist input)
+  - change mass of fist upon impact (have to use some sort of collision event listener if possible)
+  - or instead of knocking them out of the area, could do hp and dmg only done by fists

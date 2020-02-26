@@ -43,13 +43,49 @@ void World::CreateFrictionJoint(b2Body * A, b2Body * B)
 {
 	b2FrictionJointDef fjd;
 	fjd.maxForce = 9;
-	fjd.maxTorque = 3;
+	fjd.maxTorque = 9;
 	fjd.bodyA = A;
 	fjd.bodyB = B;
 	fjd.localAnchorA.Set(0.f,0.f); 
 	fjd.localAnchorB.Set(0.0f,0.0f); 
 	fjd.collideConnected = true;
 	fj = (b2FrictionJoint *) world->CreateJoint(&fjd);
+}
+
+void World::CreatePrismaticJoints(b2Body * A, b2Body * B1, b2Body * B2)
+{
+	b2PrismaticJointDef prismaticJointDef1, prismaticJointDef2;
+	prismaticJointDef1.bodyA = A; 
+	prismaticJointDef1.bodyB = B1; 
+	prismaticJointDef1.collideConnected = true; 
+	prismaticJointDef1.localAxisA.Set(0, 1); 
+	prismaticJointDef1.localAnchorA.Set(0, 0); 
+	prismaticJointDef1.localAnchorB.Set(-1, 0); 
+	prismaticJointDef1.enableLimit = true; 
+	prismaticJointDef1.lowerTranslation = 0; 
+	prismaticJointDef1.upperTranslation = 2; 
+	prismaticJointDef1.enableMotor = true; 
+	prismaticJointDef1.maxMotorForce = 5; 
+	prismaticJointDef1.motorSpeed = -2; 
+	// set localAnchorA and B later, assume its center of body for now 
+	
+	prismaticJointDef2.bodyA = A; 
+	prismaticJointDef2.bodyB = B2; 
+	prismaticJointDef2.collideConnected = true; 
+	prismaticJointDef2.localAxisA.Set(0, 1); 
+	prismaticJointDef2.localAnchorA.Set(0, 0); 
+	prismaticJointDef2.localAnchorB.Set(1, 0); 
+	prismaticJointDef2.enableLimit = true; 
+	prismaticJointDef2.lowerTranslation = 0; 
+	prismaticJointDef2.upperTranslation = 2; 
+	prismaticJointDef2.enableMotor = true; 
+	prismaticJointDef2.maxMotorForce = 5; 
+	prismaticJointDef2.motorSpeed = -2; 
+	
+	// finish creating prismatic here
+	pj1 = (b2PrismaticJoint *) world->CreateJoint(&prismaticJointDef1);
+	pj2 = (b2PrismaticJoint *) world->CreateJoint(&prismaticJointDef2);
+	// weird error with undeclared identifier
 }
 
 void World::updateMaxForceAndTorque(float spd, float angSpd)

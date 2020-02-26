@@ -17,6 +17,7 @@ class World {
 
 	b2Body * ground;
 	b2FrictionJoint * fj;
+	b2PrismaticJoint * pj1, * pj2;
 	float k;  // friction constant
 
   public:
@@ -26,6 +27,7 @@ class World {
 	void Step();
 	b2Body* CreateBody(b2BodyDef * bd);
 	void CreateFrictionJoint(b2Body * A, b2Body * B);
+	void CreatePrismaticJoints(b2Body * A, b2Body * B1, b2Body * B2);
 	void render();
 	b2Body* GetGround();
 	void updateMaxForceAndTorque(float spd, float angSpd);	// this might not work since if multiple players, their spd, angSpd differs and there's only 1 world
