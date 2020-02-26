@@ -47,22 +47,23 @@ P1::P1(World * worldRef) {	// does this allow P1's body to be created?
 	length = 1;
 	psh.SetAsBox(length/2, length/2);
 	fd.shape = &psh;
+	fd.density = 1;	 // weight of main body 
 	body->CreateFixture(&fd);
 	
 	// create fist1 and fist2 here
+	// other features of bodyDef and fixtureDef are already initialized above
+	bd.position.Set(-1 * length, 0);
+	fist1 = worldRef->CreateBody(&bd);
+	psh.SetAsBox(length/4, length/4);
+	fd.density = 0.5;  // weight of fist
+	fist1->CreateFixture(&fd);
+	
+	bd.position.Set(1 * length, 0);
+	fist2 = worldRef->CreateBody(&bd);
+	psh.SetAsBox(length/4, length/4);
+	fd.density = 0.5;  // weight of fist
+	fist2->CreateFixture(&fd);
 
-	prismaticJointDef1.bodyA = body; 
-	prismaticJointDef1.bodyB = fist1; 
-	prismaticJointDef1.collideConnected = false; 
-	prismaticJointDef1.localAxisA.Set(0, 1); 
-	// set localAnchorA and B later, assume its center of body for now 
-	
-	prismaticJointDef1.bodyA = body; 
-	prismaticJointDef2.bodyB = fist2; 
-	prismaticJointDef2.collideConnected = false; 
-	prismaticJointDef2.localAxisA.Set(0, 1); 
-	
-	// create prismaticJoints here
 	
 	keyW = 0;
 	keyA = 0;
@@ -70,6 +71,8 @@ P1::P1(World * worldRef) {	// does this allow P1's body to be created?
 	keyD = 0;
 	keyQ = 0;
 	keyE = 0;
+	key1 = 0;
+	key2 = 0;
 	
 	countW = 0;
 	countA = 0;
@@ -78,12 +81,14 @@ P1::P1(World * worldRef) {	// does this allow P1's body to be created?
 	countQ = 0;
 	countE = 0;
 
-	forceMag = 10;
-	torqueMag = 6;
+	forceMag = 15;
+	torqueMag = 15;
 	
 	frictionMag = 9;
 	
 	accTime = 25;
+	
+	impulseMag = 3.5;
 }
 
 void P1::handleEvents() {
@@ -110,6 +115,12 @@ void P1::handleEvents() {
             case SDLK_e:
 				keyE = 1;
                 break;
+            case SDLK_1:
+				key1 = 1;
+                break;
+            case SDLK_2:
+				key2 = 1;
+                break;
 		}
 	}
 	
@@ -135,6 +146,12 @@ void P1::handleEvents() {
                 break;
             case SDLK_e:
 				keyE = 0;
+                break;
+            case SDLK_1:
+				key1 = 0;
+                break;
+            case SDLK_2:
+				key2 = 0;
                 break;
 		}
 	}
@@ -186,6 +203,20 @@ void P1::update() {
 	}
 	// std::cout << body->GetAngle() << std::endl;
 	std::cout << "linear velocity: " << body->GetLinearVelocity().x << " " << body->GetLinearVelocity().y << std::endl;
+
+	if (key2)
+	{
+		impulse = b2Vec2(-1*impulseMag * sin(fist1->GetAngle()), impulseMag * cos(fist1->GetAngle()));  
+		fist1->ApplyLinearImpulse(impulse, fist1->GetWorldCenter(), true);
+		key2 = 0;
+	}
+	
+	if (key1)
+	{
+		impulse = b2Vec2(-1*impulseMag * sin(fist2->GetAngle()), impulseMag * cos(fist2->GetAngle()));  
+		fist2->ApplyLinearImpulse(impulse, fist2->GetWorldCenter(), true);
+		key1 = 0;
+	}
 }
 
 void P1::render() {
@@ -201,6 +232,10 @@ void P1::render() {
 	// SDL_RenderDrawPoint(rend, WINDOW_WIDTH/2 + body->GetPosition().x * alpha - length / 2 * alpha, WINDOW_HEIGHT/2 - body->GetPosition().y * alpha + length / 2 * alpha); 
 	// // top right
 	// SDL_RenderDrawPoint(rend, WINDOW_WIDTH/2 + body->GetPosition().x * alpha + length / 2 * alpha, WINDOW_HEIGHT/2 - body->GetPosition().y * alpha + length / 2 * alpha); 
+	/***
+		RENDERING OF MAIN BODY
+	***/
+	
 	diag = length * sqrt(2) / 2;  
 	// std::cout << "DIAG: " << diag << std::endl;
 	// rendering four corners
@@ -225,10 +260,77 @@ void P1::render() {
 	SDL_RenderDrawLine(rend, FR.x, FR.y, BR.x, BR.y);
 	SDL_RenderDrawLine(rend, BL.x, BL.y, BR.x, BR.y);
 	SDL_RenderDrawLine(rend, FL.x, FL.y, BL.x, BL.y);
+	
+	/***
+		RENDERING OF FISTS
+	***/
+	/* fist1 */
+	diag = length / 2 * sqrt(2) / 2;  
+	
+	// rendering four corners
+	angleR = fist1->GetAngle() + 135 * DEGTORAD;  // for front left corner
+	FL = b2Vec2(BoxToSDL(b2Vec2(fist1->GetPosition().x + diag * cos(angleR), fist1->GetPosition().y + diag * sin(angleR))));
+	SDL_RenderDrawPoint(rend, FL.x, FL.y); 
+	// SDL_RenderDrawPoint(rend, WINDOW_WIDTH/2 + (fist1->GetPosition().x + diag * cos(angleR)) * alpha, WINDOW_HEIGHT/2 - (fist1->GetPosition().y + diag * sin(angleR)) * alpha); 
+	angleR = fist1->GetAngle() + 45 * DEGTORAD;  // for front right corner
+	FR = b2Vec2(BoxToSDL(b2Vec2(fist1->GetPosition().x + diag * cos(angleR), fist1->GetPosition().y + diag * sin(angleR))));
+	SDL_RenderDrawPoint(rend, FR.x, FR.y); 
+	// SDL_RenderDrawPoint(rend, WINDOW_WIDTH/2 + (fist1->GetPosition().x + diag * cos(angleR)) * alpha, WINDOW_HEIGHT/2 - (fist1->GetPosition().y + diag * sin(angleR)) * alpha); 
+	angleR = fist1->GetAngle() + 225 * DEGTORAD;  // for back left corner
+	BL = b2Vec2(BoxToSDL(b2Vec2(fist1->GetPosition().x + diag * cos(angleR), fist1->GetPosition().y + diag * sin(angleR))));
+	SDL_RenderDrawPoint(rend, BL.x, BL.y); 
+	// SDL_RenderDrawPoint(rend, WINDOW_WIDTH/2 + (fist1->GetPosition().x + diag * cos(angleR)) * alpha, WINDOW_HEIGHT/2 - (fist1->GetPosition().y + diag * sin(angleR)) * alpha); 
+	angleR = fist1->GetAngle() + 315 * DEGTORAD;  // for back right corner
+	BR = b2Vec2(BoxToSDL(b2Vec2(fist1->GetPosition().x + diag * cos(angleR), fist1->GetPosition().y + diag * sin(angleR))));
+	SDL_RenderDrawPoint(rend, BR.x, BR.y); 
+	// SDL_RenderDrawPoint(rend, WINDOW_WIDTH/2 + (fist1->GetPosition().x + diag * cos(angleR)) * alpha, WINDOW_HEIGHT/2 - (fist1->GetPosition().y + diag * sin(angleR)) * alpha); 
+	// rendering four sides
+	SDL_RenderDrawLine(rend, FR.x, FR.y, FL.x, FL.y);
+	SDL_RenderDrawLine(rend, FR.x, FR.y, BR.x, BR.y);
+	SDL_RenderDrawLine(rend, BL.x, BL.y, BR.x, BR.y);
+	SDL_RenderDrawLine(rend, FL.x, FL.y, BL.x, BL.y);
+	
+	/* fist2 */
+	diag = length / 2 * sqrt(2) / 2;  
+	
+	// rendering four corners
+	angleR = fist2->GetAngle() + 135 * DEGTORAD;  // for front left corner
+	FL = b2Vec2(BoxToSDL(b2Vec2(fist2->GetPosition().x + diag * cos(angleR), fist2->GetPosition().y + diag * sin(angleR))));
+	SDL_RenderDrawPoint(rend, FL.x, FL.y); 
+	// SDL_RenderDrawPoint(rend, WINDOW_WIDTH/2 + (fist2->GetPosition().x + diag * cos(angleR)) * alpha, WINDOW_HEIGHT/2 - (fist2->GetPosition().y + diag * sin(angleR)) * alpha); 
+	angleR = fist2->GetAngle() + 45 * DEGTORAD;  // for front right corner
+	FR = b2Vec2(BoxToSDL(b2Vec2(fist2->GetPosition().x + diag * cos(angleR), fist2->GetPosition().y + diag * sin(angleR))));
+	SDL_RenderDrawPoint(rend, FR.x, FR.y); 
+	// SDL_RenderDrawPoint(rend, WINDOW_WIDTH/2 + (fist2->GetPosition().x + diag * cos(angleR)) * alpha, WINDOW_HEIGHT/2 - (fist2->GetPosition().y + diag * sin(angleR)) * alpha); 
+	angleR = fist2->GetAngle() + 225 * DEGTORAD;  // for back left corner
+	BL = b2Vec2(BoxToSDL(b2Vec2(fist2->GetPosition().x + diag * cos(angleR), fist2->GetPosition().y + diag * sin(angleR))));
+	SDL_RenderDrawPoint(rend, BL.x, BL.y); 
+	// SDL_RenderDrawPoint(rend, WINDOW_WIDTH/2 + (fist2->GetPosition().x + diag * cos(angleR)) * alpha, WINDOW_HEIGHT/2 - (fist2->GetPosition().y + diag * sin(angleR)) * alpha); 
+	angleR = fist2->GetAngle() + 315 * DEGTORAD;  // for back right corner
+	BR = b2Vec2(BoxToSDL(b2Vec2(fist2->GetPosition().x + diag * cos(angleR), fist2->GetPosition().y + diag * sin(angleR))));
+	SDL_RenderDrawPoint(rend, BR.x, BR.y); 
+	// SDL_RenderDrawPoint(rend, WINDOW_WIDTH/2 + (fist2->GetPosition().x + diag * cos(angleR)) * alpha, WINDOW_HEIGHT/2 - (fist2->GetPosition().y + diag * sin(angleR)) * alpha); 
+	// rendering four sides
+	SDL_RenderDrawLine(rend, FR.x, FR.y, FL.x, FL.y);
+	SDL_RenderDrawLine(rend, FR.x, FR.y, BR.x, BR.y);
+	SDL_RenderDrawLine(rend, BL.x, BL.y, BR.x, BR.y);
+	SDL_RenderDrawLine(rend, FL.x, FL.y, BL.x, BL.y);
+
+	
+	
 	SDL_SetRenderDrawColor(rend, 0,0,0,255);
 }
 
 b2Body * P1::GetBody()
 {
 	return body;
+}
+
+b2Body * P1::GetFist1() {
+	return fist1;
+}
+
+b2Body * P1::GetFist2()
+{
+	return fist2;
 }

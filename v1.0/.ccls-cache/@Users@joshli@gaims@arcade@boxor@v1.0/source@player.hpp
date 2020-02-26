@@ -8,7 +8,6 @@ class Player {	// interface for two p1 and p2
   public:
 	
 	b2Body * body, * fist1, * fist2;
-	b2PrismaticJointDef prismaticJointDef1, prismaticJointDef2;
 	// does there need to be a constructor?
 	// Player();
 	
@@ -17,6 +16,8 @@ class Player {	// interface for two p1 and p2
 	virtual void render() = 0;
 	
 	virtual b2Body * GetBody() = 0;
+	virtual b2Body * GetFist1() = 0;
+	virtual b2Body * GetFist2() = 0;
 };
 
 #endif

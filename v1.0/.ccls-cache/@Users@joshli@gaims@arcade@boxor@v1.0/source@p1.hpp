@@ -19,6 +19,8 @@ class P1 : public Player {
 	void render();
 	
 	b2Body * GetBody();
+	b2Body * GetFist1();
+	b2Body * GetFist2();
 	
 	int keyW;
 	int keyA;
@@ -26,6 +28,8 @@ class P1 : public Player {
 	int keyD;
 	int keyQ;
 	int keyE;
+	int key1;
+	int key2;
 
 	int countW;
 	int countA;
@@ -35,8 +39,10 @@ class P1 : public Player {
 	int countE;
 
 	b2Vec2 force;
+	b2Vec2 impulse;
 	float forceMag;
 	float torqueMag;
+	float impulseMag;  // for punching
 	
 	float frictionMag;	// obtained from world object (for now, manually updated)
 
