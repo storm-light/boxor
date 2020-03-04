@@ -89,7 +89,7 @@ Box2D/preinstall:
 Box2D/CMakeFiles/Box2D.dir/all:
 	$(MAKE) -f Box2D/CMakeFiles/Box2D.dir/build.make Box2D/CMakeFiles/Box2D.dir/depend
 	$(MAKE) -f Box2D/CMakeFiles/Box2D.dir/build.make Box2D/CMakeFiles/Box2D.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54 "Built target Box2D"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles --progress-num=9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55 "Built target Box2D"
 .PHONY : Box2D/CMakeFiles/Box2D.dir/all
 
 # Include target in all.
@@ -144,7 +144,7 @@ source/preinstall:
 source/CMakeFiles/BOXOR.dir/all: Box2D/CMakeFiles/Box2D.dir/all
 	$(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/depend
 	$(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target BOXOR"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target BOXOR"
 .PHONY : source/CMakeFiles/BOXOR.dir/all
 
 # Include target in all.
@@ -154,7 +154,7 @@ all: source/CMakeFiles/BOXOR.dir/all
 
 # Build rule for subdir invocation for target.
 source/CMakeFiles/BOXOR.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles 55
 	$(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/BOXOR.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles 0
 .PHONY : source/CMakeFiles/BOXOR.dir/rule

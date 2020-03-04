@@ -32,6 +32,7 @@ int main()
 		
 	}
 
+	SDL_Delay(3000);  // remove this later
 	gameLoop->~Loop();
 
 	// clean up

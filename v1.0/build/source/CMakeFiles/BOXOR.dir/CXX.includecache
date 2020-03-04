@@ -280,6 +280,18 @@ player.hpp
 world.hpp
 /Users/joshli/gaims/arcade/boxor/v1.0/source/world.hpp
 
+/Users/joshli/gaims/arcade/boxor/v1.0/source/p2.cpp
+p2.hpp
+/Users/joshli/gaims/arcade/boxor/v1.0/source/p2.hpp
+
+/Users/joshli/gaims/arcade/boxor/v1.0/source/p2.hpp
+globalvar.hpp
+/Users/joshli/gaims/arcade/boxor/v1.0/source/globalvar.hpp
+player.hpp
+/Users/joshli/gaims/arcade/boxor/v1.0/source/player.hpp
+world.hpp
+/Users/joshli/gaims/arcade/boxor/v1.0/source/world.hpp
+
 /Users/joshli/gaims/arcade/boxor/v1.0/source/player.hpp
 Box2D/Box2D.h
 -

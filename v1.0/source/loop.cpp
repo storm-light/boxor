@@ -13,12 +13,15 @@ Loop::Loop() {	// defines world (grav, timesteps), but not player body/fixtures
 	
 	world = new World();
 	player1 = new P1(world);
+	player2 = new P2(world);
 
 	// create friction joint
 	world->CreateFrictionJoint(world->GetGround(), player1->GetBody());
+	world->CreateFrictionJoint(world->GetGround(), player2->GetBody());
 	
 	// create prismaticJoints here
 	world->CreatePrismaticJoints(player1->GetBody(), player1->GetFist1(), player1->GetFist2());
+	world->CreatePrismaticJoints(player2->GetBody(), player2->GetFist1(), player2->GetFist2());
 
 	// // need to create a b2body for ground
 	// b2BodyDef bd;
@@ -49,6 +52,7 @@ void Loop::handleEvents() {
 			requestExit = 1;
 		
 		player1->handleEvents();
+		player2->handleEvents();
         if (event.type == SDL_KEYDOWN)
         {
             switch(event.key.keysym.sym)
@@ -67,6 +71,7 @@ void Loop::update() {
 	// world->Step(timeStep, velocityIterations, positionIterations);	
 	world->Step();
 	player1->update();
+	player2->update();
 	
 }
 
@@ -84,6 +89,7 @@ void Loop::render() {
 	// rendering of player1
 	world->render();
 	player1->render();
+	player2->render();
 	
 	SDL_RenderPresent(rend);
 	SDL_Delay(1000/60);

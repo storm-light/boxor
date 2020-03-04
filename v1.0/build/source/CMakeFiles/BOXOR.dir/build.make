@@ -109,9 +109,22 @@ source/CMakeFiles/BOXOR.dir/p1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BOXOR.dir/p1.cpp.s"
 	cd /Users/joshli/gaims/arcade/boxor/v1.0/build/source && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshli/gaims/arcade/boxor/v1.0/source/p1.cpp -o CMakeFiles/BOXOR.dir/p1.cpp.s
 
+source/CMakeFiles/BOXOR.dir/p2.cpp.o: source/CMakeFiles/BOXOR.dir/flags.make
+source/CMakeFiles/BOXOR.dir/p2.cpp.o: ../source/p2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object source/CMakeFiles/BOXOR.dir/p2.cpp.o"
+	cd /Users/joshli/gaims/arcade/boxor/v1.0/build/source && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BOXOR.dir/p2.cpp.o -c /Users/joshli/gaims/arcade/boxor/v1.0/source/p2.cpp
+
+source/CMakeFiles/BOXOR.dir/p2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BOXOR.dir/p2.cpp.i"
+	cd /Users/joshli/gaims/arcade/boxor/v1.0/build/source && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshli/gaims/arcade/boxor/v1.0/source/p2.cpp > CMakeFiles/BOXOR.dir/p2.cpp.i
+
+source/CMakeFiles/BOXOR.dir/p2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BOXOR.dir/p2.cpp.s"
+	cd /Users/joshli/gaims/arcade/boxor/v1.0/build/source && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshli/gaims/arcade/boxor/v1.0/source/p2.cpp -o CMakeFiles/BOXOR.dir/p2.cpp.s
+
 source/CMakeFiles/BOXOR.dir/player.cpp.o: source/CMakeFiles/BOXOR.dir/flags.make
 source/CMakeFiles/BOXOR.dir/player.cpp.o: ../source/player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object source/CMakeFiles/BOXOR.dir/player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object source/CMakeFiles/BOXOR.dir/player.cpp.o"
 	cd /Users/joshli/gaims/arcade/boxor/v1.0/build/source && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BOXOR.dir/player.cpp.o -c /Users/joshli/gaims/arcade/boxor/v1.0/source/player.cpp
 
 source/CMakeFiles/BOXOR.dir/player.cpp.i: cmake_force
@@ -124,7 +137,7 @@ source/CMakeFiles/BOXOR.dir/player.cpp.s: cmake_force
 
 source/CMakeFiles/BOXOR.dir/world.cpp.o: source/CMakeFiles/BOXOR.dir/flags.make
 source/CMakeFiles/BOXOR.dir/world.cpp.o: ../source/world.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object source/CMakeFiles/BOXOR.dir/world.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object source/CMakeFiles/BOXOR.dir/world.cpp.o"
 	cd /Users/joshli/gaims/arcade/boxor/v1.0/build/source && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BOXOR.dir/world.cpp.o -c /Users/joshli/gaims/arcade/boxor/v1.0/source/world.cpp
 
 source/CMakeFiles/BOXOR.dir/world.cpp.i: cmake_force
@@ -141,6 +154,7 @@ BOXOR_OBJECTS = \
 "CMakeFiles/BOXOR.dir/loop.cpp.o" \
 "CMakeFiles/BOXOR.dir/main.cpp.o" \
 "CMakeFiles/BOXOR.dir/p1.cpp.o" \
+"CMakeFiles/BOXOR.dir/p2.cpp.o" \
 "CMakeFiles/BOXOR.dir/player.cpp.o" \
 "CMakeFiles/BOXOR.dir/world.cpp.o"
 
@@ -151,12 +165,13 @@ source/BOXOR: source/CMakeFiles/BOXOR.dir/functions.cpp.o
 source/BOXOR: source/CMakeFiles/BOXOR.dir/loop.cpp.o
 source/BOXOR: source/CMakeFiles/BOXOR.dir/main.cpp.o
 source/BOXOR: source/CMakeFiles/BOXOR.dir/p1.cpp.o
+source/BOXOR: source/CMakeFiles/BOXOR.dir/p2.cpp.o
 source/BOXOR: source/CMakeFiles/BOXOR.dir/player.cpp.o
 source/BOXOR: source/CMakeFiles/BOXOR.dir/world.cpp.o
 source/BOXOR: source/CMakeFiles/BOXOR.dir/build.make
 source/BOXOR: Box2D/libBox2D.a
 source/BOXOR: source/CMakeFiles/BOXOR.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable BOXOR"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/joshli/gaims/arcade/boxor/v1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable BOXOR"
 	cd /Users/joshli/gaims/arcade/boxor/v1.0/build/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BOXOR.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
