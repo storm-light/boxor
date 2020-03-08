@@ -15,7 +15,8 @@ class World {
 	int32 velocityIterations;   //how strongly to correct velocity
 	int32 positionIterations;   //how strongly to correct position
 
-	b2Body * ground;
+	b2Body * bounds[4];
+	// b2Body * ground;
 	b2FrictionJoint * fj;
 	b2PrismaticJoint * pj1, * pj2;
 	float k;  // friction constant

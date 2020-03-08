@@ -5,7 +5,7 @@
    each person gets two boxing hands
    1v1 in the ring (no ropes, only void)
 ** ctrls
-   wasd to move
+wasd to move
    q/e to rotate
    j/k for left/right punch
 ** notes
@@ -18,7 +18,7 @@
 *** DONE make complete structure of code w/o implementation, then compile/link
 - find out why it can't compile (error: undefined symbs, "typeinfo for Player", referenced from typeinfo for P1 in p1.cpp.o)
   - [X] fixed, had to add =0 to make function pure virtual, to indicate player is a interface
-*** implement most basic form (square w wasd capabilities on grid) 
+*** DONE implement most basic form (square w wasd capabilities on grid) 
 - [X] o shit, drop test works
 - does the alpha scaling work?, yup, make sure variables are floats to not round to 0
 - [X] make box (four corners) drop test
@@ -32,13 +32,27 @@
 - [X] create a world class
 - [X] create friction joint in world class
 - 
-*** add in fists, figure out joint mechanics
+*** DONE add in fists, figure out joint mechanics
 - thinking prismatic or prismatic + distance combo
   - [X] create fist1/2 bodies, create prismaticJoints, then render 
   - used prismatic joint translation limits!
   - could potentially create another version to see if revolute joints can work as well
-- [ ] add fist impulse input (punching)
+- [X] add fist impulse input (punching)
 - could do several things to make mechanics better
   - remove main body from collision with just fist collision (and only fist input)
   - change mass of fist upon impact (have to use some sort of collision event listener if possible)
   - or instead of knocking them out of the area, could do hp and dmg only done by fists
+    
+*** DONE add arena and void
+- for now, getting knocked out means body->center is outside
+*** DONE add p2 
+** nice features
+*** TODO figure out a way to make p1, p2 code more efficient, less duplicate code 
+*** TODO decide whether or not to dissolve world class 
+*** separate version w dmg instead of void:
+- hmm, I'm leaning toward having an hp bar and that the boundaries are electric fences...
+- damage based on magnitude of normal force in collision to main body
+*** eventually change to rendering textures to make borders realistic
+*** and eventually add death animation (perhaps shrinking textures to represent falling)
+** tips and trix
+*** if when running executable, input goes to terminal, resetting computer works! at least this time

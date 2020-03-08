@@ -251,6 +251,11 @@
 },
 {
   "directory": "/Users/joshli/gaims/arcade/boxor/v1.0/build/source",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include -I/Users/joshli/gaims/arcade/boxor/v1.0/source/..  -g -Wall -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -F/Library/Frameworks  -o CMakeFiles/BOXOR.dir/p2.cpp.o -c /Users/joshli/gaims/arcade/boxor/v1.0/source/p2.cpp",
+  "file": "/Users/joshli/gaims/arcade/boxor/v1.0/source/p2.cpp"
+},
+{
+  "directory": "/Users/joshli/gaims/arcade/boxor/v1.0/build/source",
   "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include -I/Users/joshli/gaims/arcade/boxor/v1.0/source/..  -g -Wall -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -F/Library/Frameworks  -o CMakeFiles/BOXOR.dir/player.cpp.o -c /Users/joshli/gaims/arcade/boxor/v1.0/source/player.cpp",
   "file": "/Users/joshli/gaims/arcade/boxor/v1.0/source/player.cpp"
 },

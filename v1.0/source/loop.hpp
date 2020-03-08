@@ -5,9 +5,11 @@
 #include "Box2D/Box2D.h"
 #include "globalvar.hpp"
 #include "p1.hpp"
+#include "p2.hpp"
 #include "world.hpp"
 
 class P1;
+class P2;
 class World;
 
 class Loop {
@@ -21,6 +23,7 @@ class Loop {
 	// int32 positionIterations;   //how strongly to correct position
 	
 	P1 * player1;
+	P2 * player2;
 	World * world;
 	// b2Body * ground;
 	

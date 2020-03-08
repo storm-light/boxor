@@ -202,7 +202,7 @@ void P1::update() {
 		body->ApplyTorque(-1 * torqueMag, true);
 	}
 	// std::cout << body->GetAngle() << std::endl;
-	std::cout << "linear velocity: " << body->GetLinearVelocity().x << " " << body->GetLinearVelocity().y << std::endl;
+	// std::cout << "linear velocity: " << body->GetLinearVelocity().x << " " << body->GetLinearVelocity().y << std::endl;
 
 	if (key2)
 	{

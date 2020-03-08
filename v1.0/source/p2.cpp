@@ -1,6 +1,6 @@
-#include "p1.hpp"
+#include "p2.hpp"
 
-P1::P1() {
+P2::P2() {
 	
 	// // need to create a b2body here
 	// b2BodyDef bd;
@@ -29,7 +29,7 @@ P1::P1() {
 	// // body->ApplyAngularImpulse(4, true);
 }
 
-P1::P1(World * worldRef) {	// does this allow P1's body to be created?
+P2::P2(World * worldRef) {	// does this allow P2's body to be created?
 	// passing in a reference to the world object in loop.cpp
 	
 	// need to create a b2body here
@@ -40,8 +40,8 @@ P1::P1(World * worldRef) {	// does this allow P1's body to be created?
 	fd.density = 1;
 	
 	bd.type = b2_dynamicBody;
-	bd.position.Set(-10, 0);
-	bd.angle = -90 * DEGTORAD;
+	bd.position.Set(10, 0);
+	bd.angle = 90 * DEGTORAD;
 	// body = worldRef->CreateBody(&bd);
 	body = worldRef->CreateBody(&bd);
 	
@@ -66,22 +66,9 @@ P1::P1(World * worldRef) {	// does this allow P1's body to be created?
 	fist2->CreateFixture(&fd);
 
 	
-	keyW = 0;
-	keyA = 0;
-	keyS = 0;
-	keyD = 0;
-	keyQ = 0;
-	keyE = 0;
-	key1 = 0;
-	key2 = 0;
+	keyDot = 0;
+	keyComma = 0;
 	
-	countW = 0;
-	countA = 0;
-	countS = 0;
-	countD = 0;
-	countQ = 0;
-	countE = 0;
-
 	forceMag = 15;
 	torqueMag = 15;
 	
@@ -92,35 +79,17 @@ P1::P1(World * worldRef) {	// does this allow P1's body to be created?
 	impulseMag = 3.5;
 }
 
-void P1::handleEvents() {
-	// make sure this logic works out by puttting P1->handleEvents() in Loop
+void P2::handleEvents() {
+	// make sure this logic works out by puttting P2->handleEvents() in Loop
 	if (event.type == SDL_KEYDOWN)
 	{
 		switch(event.key.keysym.sym)
 		{
-            case SDLK_w:
-				keyW = 1;
+            case SDLK_PERIOD:
+				keyDot = 1;
                 break;
-            case SDLK_a:
-				keyA = 1;
-                break;
-            case SDLK_s:
-				keyS = 1;
-                break;
-            case SDLK_d:
-				keyD = 1;
-                break;
-            case SDLK_q:
-				keyQ = 1;
-                break;
-            case SDLK_e:
-				keyE = 1;
-                break;
-            case SDLK_1:
-				key1 = 1;
-                break;
-            case SDLK_2:
-				key2 = 1;
+            case SDLK_COMMA:
+				keyComma = 1;
                 break;
 		}
 	}
@@ -129,94 +98,30 @@ void P1::handleEvents() {
 	{
 		switch(event.key.keysym.sym)
 		{
-            case SDLK_w:
-				keyW = 0;
-				// countW = 0;
+            case SDLK_PERIOD:
+				keyDot = 0;
                 break;
-            case SDLK_a:
-				keyA = 0;
-                break;
-            case SDLK_s:
-				keyS = 0;
-                break;
-            case SDLK_d:
-				keyD = 0;
-                break;
-            case SDLK_q:
-				keyQ = 0;
-                break;
-            case SDLK_e:
-				keyE = 0;
-                break;
-            case SDLK_1:
-				key1 = 0;
-                break;
-            case SDLK_2:
-				key2 = 0;
+            case SDLK_COMMA:
+				keyComma = 0;
                 break;
 		}
 	}
 }
 
-void P1::update() {
+void P2::update() {
 
-	// if (pow(body->GetLinearVelocity().x, 2) + pow(body->GetLinearVelocity().y, 2) > 5)
-	// {
-	// 	return;
-	// }
-	
-	if (keyW)
-	{
-		// countW++;
-		// if (countW < accTime)
-		// {
-			force = b2Vec2(-1*forceMag * sin(body->GetAngle()), forceMag * cos(body->GetAngle()));  
-			body->ApplyForce(force, body->GetWorldCenter(), true);
-		// }
-		// else
-		// {
-		// 	force = b2Vec2(-1*frictionMag * sin(body->GetAngle()), frictionMag * cos(body->GetAngle()));  
-		// 	body->ApplyForce(force, body->GetWorldCenter(), true);
-		// }
-	}
-	if (keyA)
-	{
-		force = b2Vec2(-1*forceMag * sin(body->GetAngle() + 90*DEGTORAD), forceMag * cos(body->GetAngle() + 90*DEGTORAD));  
-		body->ApplyForce(force, body->GetWorldCenter(), true);
-	}
-	if (keyS)
-	{
-		force = b2Vec2(-1*forceMag * sin(body->GetAngle() + 180*DEGTORAD), forceMag * cos(body->GetAngle() + 180*DEGTORAD));  
-		body->ApplyForce(force, body->GetWorldCenter(), true);
-	}
-	if (keyD)
-	{
-		force = b2Vec2(-1*forceMag * sin(body->GetAngle() + 270*DEGTORAD), forceMag * cos(body->GetAngle() + 270*DEGTORAD));  
-		body->ApplyForce(force, body->GetWorldCenter(), true);
-	}
-	if (keyQ)
-	{
-		body->ApplyTorque(torqueMag, true);
-	}
-	if (keyE)
-	{
-		body->ApplyTorque(-1 * torqueMag, true);
-	}
-	// std::cout << body->GetAngle() << std::endl;
-	// std::cout << "linear velocity: " << body->GetLinearVelocity().x << " " << body->GetLinearVelocity().y << std::endl;
-
-	if (key2)
+	if (keyDot)
 	{
 		impulse = b2Vec2(-1*impulseMag * sin(fist1->GetAngle()), impulseMag * cos(fist1->GetAngle()));  
 		fist1->ApplyLinearImpulse(impulse, fist1->GetWorldCenter(), true);
-		key2 = 0;
+		keyDot = 0;
 	}
 	
-	if (key1)
+	if (keyComma)
 	{
 		impulse = b2Vec2(-1*impulseMag * sin(fist2->GetAngle()), impulseMag * cos(fist2->GetAngle()));  
 		fist2->ApplyLinearImpulse(impulse, fist2->GetWorldCenter(), true);
-		key1 = 0;
+		keyComma = 0;
 	}
 
 	if (abs(body->GetWorldCenter().x) >= 15 || abs(body->GetWorldCenter().y) >= 15)
@@ -225,7 +130,7 @@ void P1::update() {
 	}
 }
 
-void P1::render() {
+void P2::render() {
 	// pos is the actual position in space of the player, make sure to flip and adjust accordingly when rendering to match SDL's coordinate system
 	// render centerpoint first, then render whole box
 	SDL_SetRenderDrawColor(rend, 255,255,255,255);
@@ -327,16 +232,16 @@ void P1::render() {
 	SDL_SetRenderDrawColor(rend, 0,0,0,255);
 }
 
-b2Body * P1::GetBody()
+b2Body * P2::GetBody()
 {
 	return body;
 }
 
-b2Body * P1::GetFist1() {
+b2Body * P2::GetFist1() {
 	return fist1;
 }
 
-b2Body * P1::GetFist2()
+b2Body * P2::GetFist2()
 {
 	return fist2;
 }
