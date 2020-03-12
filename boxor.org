@@ -46,6 +46,11 @@ wasd to move
 *** DONE add arena and void
 - for now, getting knocked out means body->center is outside
 *** DONE add p2 
+*** TODO improving mechanics
+- [ ] possible solution 1
+  - create static body that mimics pos, ang of body
+  - have joints w fists link with this teleporting static body (no fixtures)
+  - this can allow for greater fist density without affecting body rotation
 ** nice features
 *** TODO figure out a way to make p1, p2 code more efficient, less duplicate code 
 - [X] get rid of p1,p2 class entirely, just create p1_init method in player, remove includes of "p1.hpp", etc
