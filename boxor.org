@@ -48,6 +48,7 @@ wasd to move
 *** DONE add p2 
 ** nice features
 *** TODO figure out a way to make p1, p2 code more efficient, less duplicate code 
+- get rid of p1,p2 class entirely, just create p1_init method in player, remove includes of "p1.hpp", etc
 *** TODO decide whether or not to dissolve world class 
 *** separate version w dmg instead of void:
 - hmm, I'm leaning toward having an hp bar and that the boundaries are electric fences...

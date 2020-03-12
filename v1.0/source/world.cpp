@@ -66,7 +66,7 @@ b2Body* World::CreateBody(b2BodyDef * bd)
 	return world->CreateBody(bd);
 }
 
-void World::CreateFrictionJoint(b2Body * A, b2Body * B)
+b2FrictionJoint * World::CreateFrictionJoint(b2Body * A, b2Body * B)
 {
 	b2FrictionJointDef fjd;
 	fjd.maxForce = 9;
@@ -77,9 +77,11 @@ void World::CreateFrictionJoint(b2Body * A, b2Body * B)
 	fjd.localAnchorB.Set(0.0f,0.0f); 
 	fjd.collideConnected = true;
 	fj = (b2FrictionJoint *) world->CreateJoint(&fjd);
+
+	return fj;
 }
 
-void World::CreatePrismaticJoints(b2Body * A, b2Body * B1, b2Body * B2)
+std::pair<b2PrismaticJoint *, b2PrismaticJoint *> World::CreatePrismaticJoints(b2Body * A, b2Body * B1, b2Body * B2)
 {
 	b2PrismaticJointDef prismaticJointDef1, prismaticJointDef2;
 	prismaticJointDef1.bodyA = A; 
@@ -112,8 +114,13 @@ void World::CreatePrismaticJoints(b2Body * A, b2Body * B1, b2Body * B2)
 	// finish creating prismatic here
 	pj1 = (b2PrismaticJoint *) world->CreateJoint(&prismaticJointDef1);
 	pj2 = (b2PrismaticJoint *) world->CreateJoint(&prismaticJointDef2);
-	// weird error with undeclared identifier
+
+	std::pair<b2PrismaticJoint *, b2PrismaticJoint *> res;
+	res.first = pj1;
+	res.second = pj2;
+	return res;
 }
+
 
 void World::updateMaxForceAndTorque(float spd, float angSpd)
 {

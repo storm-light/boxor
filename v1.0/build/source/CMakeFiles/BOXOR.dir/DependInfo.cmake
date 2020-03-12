@@ -7,8 +7,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/joshli/gaims/arcade/boxor/v1.0/source/functions.cpp" "/Users/joshli/gaims/arcade/boxor/v1.0/build/source/CMakeFiles/BOXOR.dir/functions.cpp.o"
   "/Users/joshli/gaims/arcade/boxor/v1.0/source/loop.cpp" "/Users/joshli/gaims/arcade/boxor/v1.0/build/source/CMakeFiles/BOXOR.dir/loop.cpp.o"
   "/Users/joshli/gaims/arcade/boxor/v1.0/source/main.cpp" "/Users/joshli/gaims/arcade/boxor/v1.0/build/source/CMakeFiles/BOXOR.dir/main.cpp.o"
-  "/Users/joshli/gaims/arcade/boxor/v1.0/source/p1.cpp" "/Users/joshli/gaims/arcade/boxor/v1.0/build/source/CMakeFiles/BOXOR.dir/p1.cpp.o"
-  "/Users/joshli/gaims/arcade/boxor/v1.0/source/p2.cpp" "/Users/joshli/gaims/arcade/boxor/v1.0/build/source/CMakeFiles/BOXOR.dir/p2.cpp.o"
   "/Users/joshli/gaims/arcade/boxor/v1.0/source/player.cpp" "/Users/joshli/gaims/arcade/boxor/v1.0/build/source/CMakeFiles/BOXOR.dir/player.cpp.o"
   "/Users/joshli/gaims/arcade/boxor/v1.0/source/world.cpp" "/Users/joshli/gaims/arcade/boxor/v1.0/build/source/CMakeFiles/BOXOR.dir/world.cpp.o"
   )

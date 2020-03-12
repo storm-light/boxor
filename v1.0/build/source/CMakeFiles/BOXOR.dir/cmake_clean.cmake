@@ -2,8 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/BOXOR.dir/functions.cpp.o"
   "CMakeFiles/BOXOR.dir/loop.cpp.o"
   "CMakeFiles/BOXOR.dir/main.cpp.o"
-  "CMakeFiles/BOXOR.dir/p1.cpp.o"
-  "CMakeFiles/BOXOR.dir/p2.cpp.o"
   "CMakeFiles/BOXOR.dir/player.cpp.o"
   "CMakeFiles/BOXOR.dir/world.cpp.o"
   "BOXOR.pdb"

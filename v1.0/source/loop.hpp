@@ -4,8 +4,7 @@
 #include <SDL2/SDL.h>
 #include "Box2D/Box2D.h"
 #include "globalvar.hpp"
-#include "p1.hpp"
-#include "p2.hpp"
+#include "player.hpp"
 #include "world.hpp"
 
 class P1;
@@ -22,8 +21,7 @@ class Loop {
 	// int32 velocityIterations;   //how strongly to correct velocity
 	// int32 positionIterations;   //how strongly to correct position
 	
-	P1 * player1;
-	P2 * player2;
+	Player * p1, * p2;
 	World * world;
 	// b2Body * ground;
 	

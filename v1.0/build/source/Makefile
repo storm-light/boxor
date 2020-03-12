@@ -206,60 +206,6 @@ main.cpp.s:
 	cd /Users/joshli/gaims/arcade/boxor/v1.0/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-p1.o: p1.cpp.o
-
-.PHONY : p1.o
-
-# target to build an object file
-p1.cpp.o:
-	cd /Users/joshli/gaims/arcade/boxor/v1.0/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/p1.cpp.o
-.PHONY : p1.cpp.o
-
-p1.i: p1.cpp.i
-
-.PHONY : p1.i
-
-# target to preprocess a source file
-p1.cpp.i:
-	cd /Users/joshli/gaims/arcade/boxor/v1.0/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/p1.cpp.i
-.PHONY : p1.cpp.i
-
-p1.s: p1.cpp.s
-
-.PHONY : p1.s
-
-# target to generate assembly for a file
-p1.cpp.s:
-	cd /Users/joshli/gaims/arcade/boxor/v1.0/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/p1.cpp.s
-.PHONY : p1.cpp.s
-
-p2.o: p2.cpp.o
-
-.PHONY : p2.o
-
-# target to build an object file
-p2.cpp.o:
-	cd /Users/joshli/gaims/arcade/boxor/v1.0/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/p2.cpp.o
-.PHONY : p2.cpp.o
-
-p2.i: p2.cpp.i
-
-.PHONY : p2.i
-
-# target to preprocess a source file
-p2.cpp.i:
-	cd /Users/joshli/gaims/arcade/boxor/v1.0/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/p2.cpp.i
-.PHONY : p2.cpp.i
-
-p2.s: p2.cpp.s
-
-.PHONY : p2.s
-
-# target to generate assembly for a file
-p2.cpp.s:
-	cd /Users/joshli/gaims/arcade/boxor/v1.0/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/p2.cpp.s
-.PHONY : p2.cpp.s
-
 player.o: player.cpp.o
 
 .PHONY : player.o
@@ -332,12 +278,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... p1.o"
-	@echo "... p1.i"
-	@echo "... p1.s"
-	@echo "... p2.o"
-	@echo "... p2.i"
-	@echo "... p2.s"
 	@echo "... player.o"
 	@echo "... player.i"
 	@echo "... player.s"
