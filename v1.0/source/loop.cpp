@@ -22,8 +22,8 @@ Loop::Loop() {	// defines world (grav, timesteps), but not player body/fixtures
 	world->CreateFrictionJoint(world->GetGround(), p2->GetBody());
 	
 	// create prismatic joints here
-	world->CreatePrismaticJoints(p1->GetBody(), p1->GetFist1(), p1->GetFist2());
-	world->CreatePrismaticJoints(p2->GetBody(), p2->GetFist1(), p2->GetFist2());
+	world->CreatePrismaticJoints(p1->GetAnchor(), p1->GetFist1(), p1->GetFist2());
+	world->CreatePrismaticJoints(p2->GetAnchor(), p2->GetFist1(), p2->GetFist2());
 
 	// // need to create a b2body for ground
 	// b2BodyDef bd;

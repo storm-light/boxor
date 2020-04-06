@@ -69,8 +69,8 @@ b2Body* World::CreateBody(b2BodyDef * bd)
 b2FrictionJoint * World::CreateFrictionJoint(b2Body * A, b2Body * B)
 {
 	b2FrictionJointDef fjd;
-	fjd.maxForce = 9;
-	fjd.maxTorque = 9;
+	fjd.maxForce = 17;
+	fjd.maxTorque = 17;
 	fjd.bodyA = A;
 	fjd.bodyB = B;
 	fjd.localAnchorA.Set(0.f,0.f); 
@@ -95,7 +95,7 @@ std::pair<b2PrismaticJoint *, b2PrismaticJoint *> World::CreatePrismaticJoints(b
 	prismaticJointDef1.upperTranslation = 2; 
 	prismaticJointDef1.enableMotor = true; 
 	prismaticJointDef1.maxMotorForce = 5; 
-	prismaticJointDef1.motorSpeed = -5; 
+	prismaticJointDef1.motorSpeed = -10; 
 	// set localAnchorA and B later, assume its center of body for now 
 	
 	prismaticJointDef2.bodyA = A; 
@@ -109,7 +109,7 @@ std::pair<b2PrismaticJoint *, b2PrismaticJoint *> World::CreatePrismaticJoints(b
 	prismaticJointDef2.upperTranslation = 2; 
 	prismaticJointDef2.enableMotor = true; 
 	prismaticJointDef2.maxMotorForce = 5; 
-	prismaticJointDef2.motorSpeed = -5; 
+	prismaticJointDef2.motorSpeed = -10; 
 	
 	// finish creating prismatic here
 	pj1 = (b2PrismaticJoint *) world->CreateJoint(&prismaticJointDef1);

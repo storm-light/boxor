@@ -11,7 +11,7 @@ class Player {	// super class of p1 and p2
 
   public:
 	
-	b2Body * body, * fist1, * fist2;
+	b2Body * body, * anchor, * fist1, * fist2;
 	// does there need to be a constructor?
 	// Player();
 	
@@ -24,6 +24,7 @@ class Player {	// super class of p1 and p2
 	float forceMag;
 	float torqueMag;
 	float impulseMag;  // for punching
+	float angImpulseMag;  // rotation of body due to punching
 	
 	float frictionMag;	// obtained from world object (for now, manually updated)
 	
@@ -48,6 +49,7 @@ class Player {	// super class of p1 and p2
 	void update();
 	void render();
 	
+	b2Body * GetAnchor();
 	b2Body * GetBody();
 	b2Body * GetFist1();
 	b2Body * GetFist2();

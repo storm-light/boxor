@@ -19,7 +19,8 @@ Player::Player(World * worldRef)  // both players share force mags initially
 	length = 1;
 	psh.SetAsBox(length/2, length/2);
 	fd.shape = &psh;
-	fd.density = 1;	 // weight of main body 
+	fd.density = 0.1;	 // weight of main body 
+	fd.restitution = 0.1;  // makes punches have more an effect, bouncy
 	body->CreateFixture(&fd);
 	
 	// create fist1 and fist2 here
@@ -27,14 +28,20 @@ Player::Player(World * worldRef)  // both players share force mags initially
 	bd.position.Set(-1 * length, 0);
 	fist1 = worldRef->CreateBody(&bd);
 	psh.SetAsBox(length/4, length/4);
-	fd.density = 0.5;  // weight of fist
+	fd.density = 1.0;  // weight of fist
 	fist1->CreateFixture(&fd);
 	
 	bd.position.Set(1 * length, 0);
 	fist2 = worldRef->CreateBody(&bd);
 	psh.SetAsBox(length/4, length/4);
-	fd.density = 0.5;  // weight of fist
+	fd.density = 1.0;  // weight of fist
 	fist2->CreateFixture(&fd);
+	
+	// creation of anchor (invisible body mimicking body)
+	bd.type = b2_kinematicBody;
+	bd.position.Set(-10, 0);  // change for p2
+	bd.angle = -90 * DEGTORAD;
+	anchor = worldRef->CreateBody(&bd);
 	
 	key1 = 0;
 	key2 = 0;
@@ -44,7 +51,8 @@ Player::Player(World * worldRef)  // both players share force mags initially
 	
 	frictionMag = 9;
 	
-	impulseMag = 3.5;
+	impulseMag = 1.5;
+	angImpulseMag = 0.5;
 }
 
 void Player::handleEvents()
@@ -109,18 +117,49 @@ void Player::handleEvents()
 
 void Player::update()
 {
+	// teleport anchor to body
+	anchor->SetTransform(body->GetPosition(), body->GetAngle());
+	// instead of teleporting, set velocity and angle?
+	anchor->SetLinearVelocity(body->GetLinearVelocity());
+	anchor->SetAngularVelocity(body->GetAngularVelocity());
+	
 	if (key2)
 	{
 		impulse = b2Vec2(-1*impulseMag * sin(fist1->GetAngle()), impulseMag * cos(fist1->GetAngle()));  
-		fist1->ApplyLinearImpulse(impulse, fist1->GetWorldCenter(), true);
-		key2 = 0;
+		// to make sure a punch goes full force no matter previous force/velocity, we reset velocity here
+		// fist1->SetLinearVelocity(b2Vec2(0,0));
+		// fist1->ApplyLinearImpulse(2 * impulse, fist1->GetWorldCenter(), true);
+		// // body->ApplyLinearImpulse(impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
+		fist1->ApplyForce(100 * impulse, fist1->GetWorldCenter(), true);
+		body->ApplyForce(20 * impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
+		// anchor->ApplyLinearImpulse(impulse, anchor->GetWorldCenter(), true);
+		
+		// rotation impulse
+		// body->ApplyAngularImpulse(angImpulseMag, true);
+		body->ApplyTorque(37 * angImpulseMag, true);
+		fist2->ApplyForceToCenter(-100 * impulse, true);
+		// fist2->ApplyLinearImpulse(-1 * impulse, fist2->GetWorldCenter(), true);
+		// anchor->ApplyAngularImpulse(angImpulseMag, true);
+		// key2 = 0;
 	}
 	
 	if (key1)
 	{
 		impulse = b2Vec2(-1*impulseMag * sin(fist2->GetAngle()), impulseMag * cos(fist2->GetAngle()));  
-		fist2->ApplyLinearImpulse(impulse, fist2->GetWorldCenter(), true);
-		key1 = 0;
+		// fist2->SetLinearVelocity(b2Vec2(0,0));
+		fist2->ApplyForce(100 * impulse, fist2->GetWorldCenter(), true);
+		body->ApplyForce(20 * impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
+		// fist2->ApplyLinearImpulse(2 * impulse, fist2->GetWorldCenter(), true);
+		// // body->ApplyLinearImpulse(impulse, body->GetWorldCenter(), true);
+		// anchor->ApplyLinearImpulse(impulse, anchor->GetWorldCenter(), true);
+		
+		// rotation impulse
+		// body->ApplyAngularImpulse(-1 * angImpulseMag, true);
+		body->ApplyTorque(-37 * angImpulseMag, true);
+		fist1->ApplyForceToCenter(-100 * impulse, true);
+		// fist1->ApplyLinearImpulse(-1 * impulse, fist1->GetWorldCenter(), true);
+		// anchor->ApplyAngularImpulse(angImpulseMag, true);
+		// key1 = 0;
 	}
 
 	if (abs(body->GetWorldCenter().x) >= 15 || abs(body->GetWorldCenter().y) >= 15)
@@ -162,6 +201,10 @@ void Player::render()
 	SDL_RenderDrawLine(rend, FR.x, FR.y, BR.x, BR.y);
 	SDL_RenderDrawLine(rend, BL.x, BL.y, BR.x, BR.y);
 	SDL_RenderDrawLine(rend, FL.x, FL.y, BL.x, BL.y);
+	
+	
+	// test: render impulse vector for fists
+	SDL_RenderDrawLine(rend, BoxToSDL(impulse).x, BoxToSDL(impulse).y, BoxToSDL(b2Vec2(0,0)).x, BoxToSDL(b2Vec2(0,0)).y);
 	
 	/***
 		RENDERING OF FISTS
@@ -231,11 +274,17 @@ void Player::P2_Init()
 	playerNumber = 2;
 
 	body->SetTransform(b2Vec2(10,0), 90 * DEGTORAD);
+	anchor->SetTransform(b2Vec2(10,0), 90 * DEGTORAD);
 }
 
 b2Body * Player::GetBody()
 {
 	return body;
+}
+
+b2Body * Player::GetAnchor()
+{
+	return anchor;
 }
 
 b2Body * Player::GetFist1()
