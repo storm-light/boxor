@@ -63,6 +63,7 @@ wasd to move
   - the rotation impulse seems a bit rigid; try to make more smooth if possible
     - this might also solve the weak punch problem
     - instead of impulse, apply force for timed amount (this can also prevent spammable punches)
+      - [ ] timed amount (like a stamina bar)
 *** TODO fix ccls
 - got the symbolic link going... and it appears to be exactly the same as boxor_back...
 - make the smallest working example possible to understand what's going on
@@ -78,3 +79,9 @@ wasd to move
 *** and eventually add death animation (perhaps shrinking textures to represent falling)
 ** tips and trix
 *** if when running executable, input goes to terminal, resetting computer works! at least this time
+** current version details
+*** v1.1 
+- uses anchor (kinematic body), instead of direct prismatic joint between fist and body
+  - allows for high impact punches (fist density increased without affecting rotation)
+- applies high magnitude force/torque into fists and body instead of impulse
+- other fist is subjected to negating force
