@@ -1,4 +1,4 @@
-# Install script for directory: /Users/joshli/gaims/arcade/boxor/v1.0/source
+# Install script for directory: /Users/joshli/gaims/arcade/boxor/v1.1/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

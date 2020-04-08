@@ -55,23 +55,24 @@ wasd to move
   - this can allow for greater fist density without affecting body rotation
 - [X] let punch affect rotation to variable extent (no longer dependent only on prismatic joint)
   - dayum, the kinematic solution just made this game look so much better, rotation works also
-- [ ] find a way to let rotation not totally affect punching power
+- [X] find a way to let rotation not totally affect punching power
   - has a bug where sometimes it doesn't appear to punch (some motor force is still being applied)
     - rotation has effect on power of punch, stopping rotation shows punches are normal
   - *maybe have a constant force on the other fist that prevents it from sliding forwards and backwards on rotation*
     - dude its actually starting to flow really nicely!!! by using forces instead of impulses
-  - the rotation impulse seems a bit rigid; try to make more smooth if possible
-    - this might also solve the weak punch problem
     - instead of impulse, apply force for timed amount (this can also prevent spammable punches)
-      - [ ] timed amount (like a stamina bar)
+      - [X] timed amount (like a stamina bar)
 *** TODO fix ccls
 - got the symbolic link going... and it appears to be exactly the same as boxor_back...
-- make the smallest working example possible to understand what's going on
+- *make the smallest working example possible to understand what's going on*
+- missing .ccls-cache or .ccls?
 ** nice features
 *** DONE figure out a way to make p1, p2 code more efficient, less duplicate code 
 - [X] get rid of p1,p2 class entirely, just create p1_init method in player, remove includes of "p1.hpp", etc
 *** DONE decide whether or not to dissolve world class 
 *** make fists not collide with body
+- might be necessary since forces on fist don't impact movement of body
+- could allow collision on super moves like "block"
 *** separate version w dmg instead of void:
 - hmm, I'm leaning toward having an hp bar and that the boundaries are electric fences...
 - damage based on magnitude of normal force in collision to main body

@@ -53,6 +53,8 @@ Player::Player(World * worldRef)  // both players share force mags initially
 	
 	impulseMag = 1.5;
 	angImpulseMag = 0.5;
+
+	stamina = 0.5 * 60;
 }
 
 void Player::handleEvents()
@@ -123,14 +125,20 @@ void Player::update()
 	anchor->SetLinearVelocity(body->GetLinearVelocity());
 	anchor->SetAngularVelocity(body->GetAngularVelocity());
 	
+	std::cout << stamina << std::endl;
 	if (key2)
 	{
+		stamina--;
+		if (stamina <= 0) {
+			stamina = 0;
+			return;
+		}
 		impulse = b2Vec2(-1*impulseMag * sin(fist1->GetAngle()), impulseMag * cos(fist1->GetAngle()));  
 		// to make sure a punch goes full force no matter previous force/velocity, we reset velocity here
 		// fist1->SetLinearVelocity(b2Vec2(0,0));
 		// fist1->ApplyLinearImpulse(2 * impulse, fist1->GetWorldCenter(), true);
 		// // body->ApplyLinearImpulse(impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
-		fist1->ApplyForce(100 * impulse, fist1->GetWorldCenter(), true);
+		fist1->ApplyForce(75 * impulse, fist1->GetWorldCenter(), true);
 		body->ApplyForce(20 * impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
 		// anchor->ApplyLinearImpulse(impulse, anchor->GetWorldCenter(), true);
 		
@@ -145,9 +153,14 @@ void Player::update()
 	
 	if (key1)
 	{
+		stamina--;
+		if (stamina <= 0) {
+			stamina = 0;
+			return;
+		}
 		impulse = b2Vec2(-1*impulseMag * sin(fist2->GetAngle()), impulseMag * cos(fist2->GetAngle()));  
 		// fist2->SetLinearVelocity(b2Vec2(0,0));
-		fist2->ApplyForce(100 * impulse, fist2->GetWorldCenter(), true);
+		fist2->ApplyForce(75 * impulse, fist2->GetWorldCenter(), true);
 		body->ApplyForce(20 * impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
 		// fist2->ApplyLinearImpulse(2 * impulse, fist2->GetWorldCenter(), true);
 		// // body->ApplyLinearImpulse(impulse, body->GetWorldCenter(), true);
@@ -162,6 +175,11 @@ void Player::update()
 		// key1 = 0;
 	}
 
+	if (!key1 && !key2)
+	{
+		stamina++;
+		if (stamina > 30) stamina = 30;
+	}
 	if (abs(body->GetWorldCenter().x) >= 15 || abs(body->GetWorldCenter().y) >= 15)
 	{
 		requestExit = 1;

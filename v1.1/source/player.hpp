@@ -27,6 +27,8 @@ class Player {	// super class of p1 and p2
 	float angImpulseMag;  // rotation of body due to punching
 	
 	float frictionMag;	// obtained from world object (for now, manually updated)
+
+	int stamina;	// time cap on inputting forces (not as spammable punches)
 	
 	// for rendering purposes
 	float length;	// side length of box
