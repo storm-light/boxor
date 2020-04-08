@@ -60,7 +60,9 @@ wasd to move
     - dude its actually starting to flow really nicely!!! by using forces instead of impulses
     - instead of impulse, apply force for timed amount (this can also prevent spammable punches)
       - [X] timed amount (like a stamina bar)
-*** texturing
+*** TODO make fists not collide with body
+- might be necessary since forces on fist don't impact movement of body
+- could allow collision on special moves like "block"
 *** TODO fix ccls
 - got the symbolic link going... and it appears to be exactly the same as boxor_back...
 - *make the smallest working example possible to understand what's going on*
@@ -69,9 +71,6 @@ wasd to move
 *** DONE figure out a way to make p1, p2 code more efficient, less duplicate code 
 - [X] get rid of p1,p2 class entirely, just create p1_init method in player, remove includes of "p1.hpp", etc
 *** DONE decide whether or not to dissolve world class 
-*** make fists not collide with body
-- might be necessary since forces on fist don't impact movement of body
-- could allow collision on super moves like "block"
 *** separate version w dmg instead of void:
 - hmm, I'm leaning toward having an hp bar and that the boundaries are electric fences...
 - damage based on magnitude of normal force in collision to main body
@@ -79,9 +78,12 @@ wasd to move
 *** and eventually add death animation (perhaps shrinking textures to represent falling)
 ** tips and trix
 *** if when running executable, input goes to terminal, resetting computer works! at least this time
+*** git checkout [commit hash]
 ** current version details
-*** v1.1 
+*** v1.1
 - uses anchor (kinematic body), instead of direct prismatic joint between fist and body
   - allows for high impact punches (fist density increased without affecting rotation)
 - applies high magnitude force/torque into fists and body instead of impulse
 - other fist is subjected to negating force
+*** v1.2
+- [ ] remove fist on fist collision
