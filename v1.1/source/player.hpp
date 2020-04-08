@@ -12,9 +12,6 @@ class Player {	// super class of p1 and p2
   public:
 	
 	b2Body * body, * anchor, * fist1, * fist2;
-	// does there need to be a constructor?
-	// Player();
-	
 	// for handling input
 	int key1, key2;
 	

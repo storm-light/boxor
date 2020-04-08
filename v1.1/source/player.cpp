@@ -51,10 +51,10 @@ Player::Player(World * worldRef)  // both players share force mags initially
 	
 	frictionMag = 9;
 	
-	impulseMag = 1.5;
-	angImpulseMag = 0.5;
+	impulseMag = 1.5 * 20;
+	angImpulseMag = 0.5 * 37;
 
-	stamina = 0.5 * 60;
+	stamina = 30;
 }
 
 void Player::handleEvents()
@@ -134,21 +134,12 @@ void Player::update()
 			return;
 		}
 		impulse = b2Vec2(-1*impulseMag * sin(fist1->GetAngle()), impulseMag * cos(fist1->GetAngle()));  
-		// to make sure a punch goes full force no matter previous force/velocity, we reset velocity here
-		// fist1->SetLinearVelocity(b2Vec2(0,0));
-		// fist1->ApplyLinearImpulse(2 * impulse, fist1->GetWorldCenter(), true);
-		// // body->ApplyLinearImpulse(impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
-		fist1->ApplyForce(75 * impulse, fist1->GetWorldCenter(), true);
-		body->ApplyForce(20 * impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
-		// anchor->ApplyLinearImpulse(impulse, anchor->GetWorldCenter(), true);
+		fist1->ApplyForce(4 * impulse, fist1->GetWorldCenter(), true);
+		body->ApplyForce(impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
 		
 		// rotation impulse
-		// body->ApplyAngularImpulse(angImpulseMag, true);
-		body->ApplyTorque(37 * angImpulseMag, true);
+		body->ApplyTorque(angImpulseMag, true);
 		fist2->ApplyForceToCenter(-100 * impulse, true);
-		// fist2->ApplyLinearImpulse(-1 * impulse, fist2->GetWorldCenter(), true);
-		// anchor->ApplyAngularImpulse(angImpulseMag, true);
-		// key2 = 0;
 	}
 	
 	if (key1)
@@ -158,21 +149,14 @@ void Player::update()
 			stamina = 0;
 			return;
 		}
+		
 		impulse = b2Vec2(-1*impulseMag * sin(fist2->GetAngle()), impulseMag * cos(fist2->GetAngle()));  
-		// fist2->SetLinearVelocity(b2Vec2(0,0));
-		fist2->ApplyForce(75 * impulse, fist2->GetWorldCenter(), true);
-		body->ApplyForce(20 * impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
-		// fist2->ApplyLinearImpulse(2 * impulse, fist2->GetWorldCenter(), true);
-		// // body->ApplyLinearImpulse(impulse, body->GetWorldCenter(), true);
-		// anchor->ApplyLinearImpulse(impulse, anchor->GetWorldCenter(), true);
+		fist2->ApplyForce(4 * impulse, fist2->GetWorldCenter(), true);
+		body->ApplyForce(impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
 		
 		// rotation impulse
-		// body->ApplyAngularImpulse(-1 * angImpulseMag, true);
-		body->ApplyTorque(-37 * angImpulseMag, true);
+		body->ApplyTorque(angImpulseMag, true);
 		fist1->ApplyForceToCenter(-100 * impulse, true);
-		// fist1->ApplyLinearImpulse(-1 * impulse, fist1->GetWorldCenter(), true);
-		// anchor->ApplyAngularImpulse(angImpulseMag, true);
-		// key1 = 0;
 	}
 
 	if (!key1 && !key2)
@@ -222,7 +206,7 @@ void Player::render()
 	
 	
 	// test: render impulse vector for fists
-	SDL_RenderDrawLine(rend, BoxToSDL(impulse).x, BoxToSDL(impulse).y, BoxToSDL(b2Vec2(0,0)).x, BoxToSDL(b2Vec2(0,0)).y);
+	// SDL_RenderDrawLine(rend, BoxToSDL(impulse).x, BoxToSDL(impulse).y, BoxToSDL(b2Vec2(0,0)).x, BoxToSDL(b2Vec2(0,0)).y);
 	
 	/***
 		RENDERING OF FISTS

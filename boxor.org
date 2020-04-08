@@ -46,7 +46,7 @@ wasd to move
 *** DONE add arena and void
 - for now, getting knocked out means body->center is outside
 *** DONE add p2 
-*** TODO improving mechanics
+*** DONE improving mechanics
 - [X] possible solution 1
   - create static body that mimics pos, ang of body
   - have joints w fists link with this teleporting static body (no fixtures)
@@ -56,12 +56,11 @@ wasd to move
 - [X] let punch affect rotation to variable extent (no longer dependent only on prismatic joint)
   - dayum, the kinematic solution just made this game look so much better, rotation works also
 - [X] find a way to let rotation not totally affect punching power
-  - has a bug where sometimes it doesn't appear to punch (some motor force is still being applied)
-    - rotation has effect on power of punch, stopping rotation shows punches are normal
   - *maybe have a constant force on the other fist that prevents it from sliding forwards and backwards on rotation*
     - dude its actually starting to flow really nicely!!! by using forces instead of impulses
     - instead of impulse, apply force for timed amount (this can also prevent spammable punches)
       - [X] timed amount (like a stamina bar)
+*** texturing
 *** TODO fix ccls
 - got the symbolic link going... and it appears to be exactly the same as boxor_back...
 - *make the smallest working example possible to understand what's going on*

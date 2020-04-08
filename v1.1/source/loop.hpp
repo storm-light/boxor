@@ -15,15 +15,8 @@ class Loop {
 	
   private:
 	
-	// b2Vec2 gravity;
-	
-	// float32 timeStep;      //the length of time passed to simulate (seconds)
-	// int32 velocityIterations;   //how strongly to correct velocity
-	// int32 positionIterations;   //how strongly to correct position
-	
 	Player * p1, * p2;
 	World * world;
-	// b2Body * ground;
 	
   public:
 
