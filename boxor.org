@@ -60,13 +60,21 @@ wasd to move
     - dude its actually starting to flow really nicely!!! by using forces instead of impulses
     - instead of impulse, apply force for timed amount (this can also prevent spammable punches)
       - [X] timed amount (like a stamina bar)
-*** TODO make fists not collide with body
+*** TODO make fists not collide with fists; collision filtering
 - might be necessary since forces on fist don't impact movement of body
+- this doesn't fix bug where body can't push other body through forces impacting fists
+  - however, this may not be fixable bc if we were to disable fist-body collision and re-enable within fist is in body, it would super spazz?
+  - read "anatomy of a collision" to find out
+  - but even if implementable, might be a good idea to come back to it in v2.0 or later
+    - mechanics are satisfying for now
+    - mechanics may need updates when actual multiplayer is tested
 - could allow collision on special moves like "block"
-*** TODO fix ccls
+*** TODO fix auto-completion
 - got the symbolic link going... and it appears to be exactly the same as boxor_back...
 - *make the smallest working example possible to understand what's going on*
 - missing .ccls-cache or .ccls?
+- it might be the fault of company-mode since that's the auto-completion package
+  - read into what each packages does
 ** nice features
 *** DONE figure out a way to make p1, p2 code more efficient, less duplicate code 
 - [X] get rid of p1,p2 class entirely, just create p1_init method in player, remove includes of "p1.hpp", etc

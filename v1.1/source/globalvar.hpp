@@ -20,4 +20,10 @@ extern bool requestExit;
 // extern b2World * world;
 extern int alpha;  // scale from box2d units to SDL pixels
 
+enum entityCategory {
+	BOUNDARY = 0x01,
+	FIST = 0x02,
+	BODY = 0x04,
+};
+	
 #endif

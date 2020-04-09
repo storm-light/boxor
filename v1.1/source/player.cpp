@@ -3,6 +3,7 @@
 // or is it... because p1 and p2 are practically the same, most code shall go here
 Player::Player(World * worldRef)  // both players share force mags initially
 {
+	// creating body,
 	// need to create a b2body here
 	b2BodyDef bd;
 	b2FixtureDef fd;
@@ -21,6 +22,8 @@ Player::Player(World * worldRef)  // both players share force mags initially
 	fd.shape = &psh;
 	fd.density = 0.1;	 // weight of main body 
 	fd.restitution = 0.1;  // makes punches have more an effect, bouncy
+	fd.filter.categoryBits = BODY;
+	fd.filter.maskBits = BODY | FIST | BOUNDARY;
 	body->CreateFixture(&fd);
 	
 	// create fist1 and fist2 here
@@ -29,12 +32,15 @@ Player::Player(World * worldRef)  // both players share force mags initially
 	fist1 = worldRef->CreateBody(&bd);
 	psh.SetAsBox(length/4, length/4);
 	fd.density = 1.0;  // weight of fist
+	fd.filter.categoryBits = FIST;
+	fd.filter.maskBits = BOUNDARY | BODY;  // only collides with boundaries and bodies, no fists
 	fist1->CreateFixture(&fd);
 	
 	bd.position.Set(1 * length, 0);
 	fist2 = worldRef->CreateBody(&bd);
 	psh.SetAsBox(length/4, length/4);
 	fd.density = 1.0;  // weight of fist
+	// fd.filter same as before
 	fist2->CreateFixture(&fd);
 	
 	// creation of anchor (invisible body mimicking body)
@@ -51,7 +57,7 @@ Player::Player(World * worldRef)  // both players share force mags initially
 	
 	frictionMag = 9;
 	
-	impulseMag = 1.5 * 20;
+	impulseMag = 1.5;
 	angImpulseMag = 0.5 * 37;
 
 	stamina = 30;
@@ -134,8 +140,8 @@ void Player::update()
 			return;
 		}
 		impulse = b2Vec2(-1*impulseMag * sin(fist1->GetAngle()), impulseMag * cos(fist1->GetAngle()));  
-		fist1->ApplyForce(4 * impulse, fist1->GetWorldCenter(), true);
-		body->ApplyForce(impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
+		fist1->ApplyForce(100 * impulse, fist1->GetWorldCenter(), true);
+		body->ApplyForce(20 * impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
 		
 		// rotation impulse
 		body->ApplyTorque(angImpulseMag, true);
@@ -151,11 +157,11 @@ void Player::update()
 		}
 		
 		impulse = b2Vec2(-1*impulseMag * sin(fist2->GetAngle()), impulseMag * cos(fist2->GetAngle()));  
-		fist2->ApplyForce(4 * impulse, fist2->GetWorldCenter(), true);
-		body->ApplyForce(impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
+		fist2->ApplyForce(100 * impulse, fist2->GetWorldCenter(), true);
+		body->ApplyForce(20 * impulse, body->GetWorldCenter(), true); // need this since fist1 is connected with anchor and does not impact forces on body
 		
 		// rotation impulse
-		body->ApplyTorque(angImpulseMag, true);
+		body->ApplyTorque(-1 * angImpulseMag, true);
 		fist1->ApplyForceToCenter(-100 * impulse, true);
 	}
 
