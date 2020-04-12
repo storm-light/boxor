@@ -61,6 +61,13 @@ Player::Player(World * worldRef)  // both players share force mags initially
 	angImpulseMag = 0.5 * 37;
 
 	stamina = 30;
+
+	tex = SDL_CreateTexture(rend, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, 10, 10); // arbitrary width and height because whole texture is white
+	SDL_SetRenderTarget(rend, tex);					  // renders to tex
+    SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);  // white
+	SDL_RenderFillRect(rend, NULL);					   // colors the whole thing
+	SDL_SetRenderTarget(rend, NULL);				   // renders to default target
+	flip = SDL_FLIP_HORIZONTAL | SDL_FLIP_VERTICAL;
 }
 
 void Player::handleEvents()
@@ -209,6 +216,10 @@ void Player::render()
 	SDL_RenderDrawLine(rend, FR.x, FR.y, BR.x, BR.y);
 	SDL_RenderDrawLine(rend, BL.x, BL.y, BR.x, BR.y);
 	SDL_RenderDrawLine(rend, FL.x, FL.y, BL.x, BL.y);
+	// renders tex to fill same square of space
+	rect->x = FL.x; rect->y = ...
+							center
+	SDL_RenderCopyEx(rend, tex, NULL, &rect, angleR, center, flip);
 	
 	
 	// test: render impulse vector for fists

@@ -69,6 +69,9 @@ wasd to move
     - mechanics are satisfying for now
     - mechanics may need updates when actual multiplayer is tested
 - could allow collision on special moves like "block"
+*** debating whether to texture players
+- seems difficult to do, annoying rather
+- but could allow in easy change of skins
 *** TODO fix auto-completion
 - got the symbolic link going... and it appears to be exactly the same as boxor_back...
 - *make the smallest working example possible to understand what's going on*

@@ -37,6 +37,11 @@ class Player {	// super class of p1 and p2
 	b2Vec2 BL;	// back left
 	b2Vec2 BR;	// back right
 	
+	SDL_Texture * tex;	// plain white texture for body and fists
+	SDL_Rect * rect;
+	SDL_Point * center;
+	SDL_RendererFlip flip;
+	
 	Player(World * worldRef);
 	~Player();
 	
