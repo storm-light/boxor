@@ -39,9 +39,9 @@ source/CMakeFiles/BOXOR.dir/functions.cpp.o
  ../source/../Box2D/Dynamics/b2TimeStep.h
  ../source/../Box2D/Dynamics/b2World.h
  ../source/../Box2D/Dynamics/b2WorldCallbacks.h
- /Users/joshli/gaims/arcade/boxor/v1.1/source/functions.cpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/functions.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/globalvar.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/functions.cpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/functions.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/globalvar.hpp
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h
@@ -125,12 +125,12 @@ source/CMakeFiles/BOXOR.dir/loop.cpp.o
  ../source/../Box2D/Dynamics/b2TimeStep.h
  ../source/../Box2D/Dynamics/b2World.h
  ../source/../Box2D/Dynamics/b2WorldCallbacks.h
- /Users/joshli/gaims/arcade/boxor/v1.1/source/functions.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/globalvar.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/loop.cpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/loop.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/player.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/world.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/functions.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/globalvar.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/loop.cpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/loop.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/player.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/world.hpp
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h
@@ -214,12 +214,12 @@ source/CMakeFiles/BOXOR.dir/main.cpp.o
  ../source/../Box2D/Dynamics/b2TimeStep.h
  ../source/../Box2D/Dynamics/b2World.h
  ../source/../Box2D/Dynamics/b2WorldCallbacks.h
- /Users/joshli/gaims/arcade/boxor/v1.1/source/functions.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/globalvar.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/loop.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/main.cpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/player.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/world.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/functions.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/globalvar.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/loop.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/main.cpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/player.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/world.hpp
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h
@@ -303,11 +303,11 @@ source/CMakeFiles/BOXOR.dir/player.cpp.o
  ../source/../Box2D/Dynamics/b2TimeStep.h
  ../source/../Box2D/Dynamics/b2World.h
  ../source/../Box2D/Dynamics/b2WorldCallbacks.h
- /Users/joshli/gaims/arcade/boxor/v1.1/source/functions.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/globalvar.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/player.cpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/player.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/world.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/functions.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/globalvar.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/player.cpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/player.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/world.hpp
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h
@@ -391,10 +391,10 @@ source/CMakeFiles/BOXOR.dir/world.cpp.o
  ../source/../Box2D/Dynamics/b2TimeStep.h
  ../source/../Box2D/Dynamics/b2World.h
  ../source/../Box2D/Dynamics/b2WorldCallbacks.h
- /Users/joshli/gaims/arcade/boxor/v1.1/source/functions.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/globalvar.hpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/world.cpp
- /Users/joshli/gaims/arcade/boxor/v1.1/source/world.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/functions.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/globalvar.hpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/world.cpp
+ /Users/joshli/gaims/arcade/boxor/v1.1.2/source/world.hpp
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h

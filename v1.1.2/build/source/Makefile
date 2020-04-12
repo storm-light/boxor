@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.14.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/joshli/gaims/arcade/boxor/v1.1
+CMAKE_SOURCE_DIR = /Users/joshli/gaims/arcade/boxor/v1.1.2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/joshli/gaims/arcade/boxor/v1.1/build
+CMAKE_BINARY_DIR = /Users/joshli/gaims/arcade/boxor/v1.1.2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/joshli/gaims/arcade/boxor/v1.1/build/CMakeFiles /Users/joshli/gaims/arcade/boxor/v1.1/build/source/CMakeFiles/progress.marks
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f CMakeFiles/Makefile2 source/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/joshli/gaims/arcade/boxor/v1.1/build/CMakeFiles 0
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/joshli/gaims/arcade/boxor/v1.1.2/build/CMakeFiles /Users/joshli/gaims/arcade/boxor/v1.1.2/build/source/CMakeFiles/progress.marks
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f CMakeFiles/Makefile2 source/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/joshli/gaims/arcade/boxor/v1.1.2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f CMakeFiles/Makefile2 source/clean
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f CMakeFiles/Makefile2 source/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f CMakeFiles/Makefile2 source/preinstall
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f CMakeFiles/Makefile2 source/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f CMakeFiles/Makefile2 source/preinstall
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f CMakeFiles/Makefile2 source/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 source/CMakeFiles/BOXOR.dir/rule:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/BOXOR.dir/rule
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/BOXOR.dir/rule
 .PHONY : source/CMakeFiles/BOXOR.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ BOXOR: source/CMakeFiles/BOXOR.dir/rule
 
 # fast build rule for target.
 BOXOR/fast:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/build
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/build
 .PHONY : BOXOR/fast
 
 functions.o: functions.cpp.o
@@ -131,7 +131,7 @@ functions.o: functions.cpp.o
 
 # target to build an object file
 functions.cpp.o:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/functions.cpp.o
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/functions.cpp.o
 .PHONY : functions.cpp.o
 
 functions.i: functions.cpp.i
@@ -140,7 +140,7 @@ functions.i: functions.cpp.i
 
 # target to preprocess a source file
 functions.cpp.i:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/functions.cpp.i
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/functions.cpp.i
 .PHONY : functions.cpp.i
 
 functions.s: functions.cpp.s
@@ -149,7 +149,7 @@ functions.s: functions.cpp.s
 
 # target to generate assembly for a file
 functions.cpp.s:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/functions.cpp.s
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/functions.cpp.s
 .PHONY : functions.cpp.s
 
 loop.o: loop.cpp.o
@@ -158,7 +158,7 @@ loop.o: loop.cpp.o
 
 # target to build an object file
 loop.cpp.o:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/loop.cpp.o
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/loop.cpp.o
 .PHONY : loop.cpp.o
 
 loop.i: loop.cpp.i
@@ -167,7 +167,7 @@ loop.i: loop.cpp.i
 
 # target to preprocess a source file
 loop.cpp.i:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/loop.cpp.i
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/loop.cpp.i
 .PHONY : loop.cpp.i
 
 loop.s: loop.cpp.s
@@ -176,7 +176,7 @@ loop.s: loop.cpp.s
 
 # target to generate assembly for a file
 loop.cpp.s:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/loop.cpp.s
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/loop.cpp.s
 .PHONY : loop.cpp.s
 
 main.o: main.cpp.o
@@ -185,7 +185,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/main.cpp.o
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -194,7 +194,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/main.cpp.i
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -203,7 +203,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/main.cpp.s
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 player.o: player.cpp.o
@@ -212,7 +212,7 @@ player.o: player.cpp.o
 
 # target to build an object file
 player.cpp.o:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/player.cpp.o
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/player.cpp.o
 .PHONY : player.cpp.o
 
 player.i: player.cpp.i
@@ -221,7 +221,7 @@ player.i: player.cpp.i
 
 # target to preprocess a source file
 player.cpp.i:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/player.cpp.i
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/player.cpp.i
 .PHONY : player.cpp.i
 
 player.s: player.cpp.s
@@ -230,7 +230,7 @@ player.s: player.cpp.s
 
 # target to generate assembly for a file
 player.cpp.s:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/player.cpp.s
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/player.cpp.s
 .PHONY : player.cpp.s
 
 world.o: world.cpp.o
@@ -239,7 +239,7 @@ world.o: world.cpp.o
 
 # target to build an object file
 world.cpp.o:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/world.cpp.o
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/world.cpp.o
 .PHONY : world.cpp.o
 
 world.i: world.cpp.i
@@ -248,7 +248,7 @@ world.i: world.cpp.i
 
 # target to preprocess a source file
 world.cpp.i:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/world.cpp.i
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/world.cpp.i
 .PHONY : world.cpp.i
 
 world.s: world.cpp.s
@@ -257,7 +257,7 @@ world.s: world.cpp.s
 
 # target to generate assembly for a file
 world.cpp.s:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/world.cpp.s
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(MAKE) -f source/CMakeFiles/BOXOR.dir/build.make source/CMakeFiles/BOXOR.dir/world.cpp.s
 .PHONY : world.cpp.s
 
 # Help Target
@@ -295,6 +295,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/joshli/gaims/arcade/boxor/v1.1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/joshli/gaims/arcade/boxor/v1.1.2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

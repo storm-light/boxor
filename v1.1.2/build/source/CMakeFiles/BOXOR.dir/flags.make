@@ -6,5 +6,5 @@ CXX_FLAGS = -g -Wall -std=c++11 -isysroot /Library/Developer/CommandLineTools/SD
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/include -I/Users/joshli/gaims/arcade/boxor/v1.1/source/.. 
+CXX_INCLUDES = -I/usr/local/include -I/Users/joshli/gaims/arcade/boxor/v1.1.2/source/.. 
 
