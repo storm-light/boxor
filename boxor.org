@@ -96,3 +96,5 @@ wasd to move
 - other fist is subjected to negating force
 *** v1.1.1
 - [X] remove fist on fist collision
+*** v1.1.2
+- texturing of players
