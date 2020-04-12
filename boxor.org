@@ -60,7 +60,7 @@ wasd to move
     - dude its actually starting to flow really nicely!!! by using forces instead of impulses
     - instead of impulse, apply force for timed amount (this can also prevent spammable punches)
       - [X] timed amount (like a stamina bar)
-*** TODO make fists not collide with fists; collision filtering
+*** DONE make fists not collide with fists; collision filtering
 - might be necessary since forces on fist don't impact movement of body
 - this doesn't fix bug where body can't push other body through forces impacting fists
   - however, this may not be fixable bc if we were to disable fist-body collision and re-enable within fist is in body, it would super spazz?
@@ -72,6 +72,7 @@ wasd to move
 *** TODO fix auto-completion
 - got the symbolic link going... and it appears to be exactly the same as boxor_back...
 - *make the smallest working example possible to understand what's going on*
+  - this could be resolved by creating that emacs core config file
 - missing .ccls-cache or .ccls?
 - it might be the fault of company-mode since that's the auto-completion package
   - read into what each packages does
@@ -93,5 +94,5 @@ wasd to move
   - allows for high impact punches (fist density increased without affecting rotation)
 - applies high magnitude force/torque into fists and body instead of impulse
 - other fist is subjected to negating force
-*** v1.2
-- [ ] remove fist on fist collision
+*** v1.1.1
+- [X] remove fist on fist collision
