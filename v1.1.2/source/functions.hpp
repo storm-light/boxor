@@ -3,5 +3,6 @@
 
 bool init();
 b2Vec2 BoxToSDL(b2Vec2 in);
+int BoxToSDL(float in);
 
 #endif

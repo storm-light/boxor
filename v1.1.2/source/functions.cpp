@@ -49,3 +49,8 @@ b2Vec2 BoxToSDL(b2Vec2 in)
 {
 	return b2Vec2(WINDOW_WIDTH/2 + alpha * in.x, WINDOW_HEIGHT/2 - alpha * in.y);
 }
+
+int BoxToSDL(float in)
+{
+	return alpha * in;
+}

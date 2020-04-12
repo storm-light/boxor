@@ -62,12 +62,14 @@ Player::Player(World * worldRef)  // both players share force mags initially
 
 	stamina = 30;
 
-	tex = SDL_CreateTexture(rend, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, 10, 10); // arbitrary width and height because whole texture is white
+	tex = SDL_CreateTexture(rend, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, BoxToSDL(length), BoxToSDL(length)); // arbitrary width and height because whole texture is white
 	SDL_SetRenderTarget(rend, tex);					  // renders to tex
     SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);  // white
 	SDL_RenderFillRect(rend, NULL);					   // colors the whole thing
 	SDL_SetRenderTarget(rend, NULL);				   // renders to default target
-	flip = SDL_FLIP_HORIZONTAL | SDL_FLIP_VERTICAL;
+    SDL_SetRenderDrawColor(rend, 0, 0, 0, 255);  // back to default black
+	rect = new SDL_Rect;
+	flip = (SDL_RendererFlip) (SDL_FLIP_HORIZONTAL | SDL_FLIP_VERTICAL);
 }
 
 void Player::handleEvents()
@@ -197,29 +199,36 @@ void Player::render()
 	// rendering four corners
 	angleR = body->GetAngle() + 135 * DEGTORAD;  // for front left corner
 	FL = b2Vec2(BoxToSDL(b2Vec2(body->GetPosition().x + diag * cos(angleR), body->GetPosition().y + diag * sin(angleR))));
-	SDL_RenderDrawPoint(rend, FL.x, FL.y); 
+	// SDL_RenderDrawPoint(rend, FL.x, FL.y); 
 	
 	angleR = body->GetAngle() + 45 * DEGTORAD;  // for front right corner
 	FR = b2Vec2(BoxToSDL(b2Vec2(body->GetPosition().x + diag * cos(angleR), body->GetPosition().y + diag * sin(angleR))));
-	SDL_RenderDrawPoint(rend, FR.x, FR.y); 
+	// SDL_RenderDrawPoint(rend, FR.x, FR.y); 
 	
 	angleR = body->GetAngle() + 225 * DEGTORAD;  // for back left corner
 	BL = b2Vec2(BoxToSDL(b2Vec2(body->GetPosition().x + diag * cos(angleR), body->GetPosition().y + diag * sin(angleR))));
-	SDL_RenderDrawPoint(rend, BL.x, BL.y); 
+	// SDL_RenderDrawPoint(rend, BL.x, BL.y); 
 	
 	angleR = body->GetAngle() + 315 * DEGTORAD;  // for back right corner
 	BR = b2Vec2(BoxToSDL(b2Vec2(body->GetPosition().x + diag * cos(angleR), body->GetPosition().y + diag * sin(angleR))));
-	SDL_RenderDrawPoint(rend, BR.x, BR.y); 
+	// SDL_RenderDrawPoint(rend, BR.x, BR.y); 
 	
-	// rendering four sides
-	SDL_RenderDrawLine(rend, FR.x, FR.y, FL.x, FL.y);
-	SDL_RenderDrawLine(rend, FR.x, FR.y, BR.x, BR.y);
-	SDL_RenderDrawLine(rend, BL.x, BL.y, BR.x, BR.y);
-	SDL_RenderDrawLine(rend, FL.x, FL.y, BL.x, BL.y);
-	// renders tex to fill same square of space
-	rect->x = FL.x; rect->y = ...
-							center
-	SDL_RenderCopyEx(rend, tex, NULL, &rect, angleR, center, flip);
+	// rendering four sides (through lines)
+	// SDL_RenderDrawLine(rend, FR.x, FR.y, FL.x, FL.y);
+	// SDL_RenderDrawLine(rend, FR.x, FR.y, BR.x, BR.y);
+	// SDL_RenderDrawLine(rend, BL.x, BL.y, BR.x, BR.y);
+	// SDL_RenderDrawLine(rend, FL.x, FL.y, BL.x, BL.y);
+	
+	// renders body with tex
+	// center.x = BoxToSDL(body->GetWorldCenter()).x;
+	// center.y = BoxToSDL(body->GetWorldCenter()).y;
+	rect->w = BoxToSDL(length);
+	rect->h = BoxToSDL(length);
+	rect->x = BoxToSDL(body->GetWorldCenter() + b2Vec2(-1*length/2, length/2)).x;
+	rect->y = BoxToSDL(body->GetWorldCenter() + b2Vec2(-1*length/2, length/2)).y;
+	SDL_RenderCopyEx(rend, tex, NULL, rect, -1 * body->GetAngle() * RADTODEG, NULL, flip); // renderCopyEx does angles clockwise and in degrees
+	rect->x = BoxToSDL(body->GetWorldCenter() + b2Vec2(-1*length/2, -1*length)).x;
+	SDL_RenderCopyEx(rend, tex, NULL, rect, -1 * body->GetAngle() * RADTODEG, NULL, flip); // renderCopyEx does angles clockwise and in degrees
 	
 	
 	// test: render impulse vector for fists
@@ -234,25 +243,33 @@ void Player::render()
 	// rendering four corners
 	angleR = fist1->GetAngle() + 135 * DEGTORAD;  // for front left corner
 	FL = b2Vec2(BoxToSDL(b2Vec2(fist1->GetPosition().x + diag * cos(angleR), fist1->GetPosition().y + diag * sin(angleR))));
-	SDL_RenderDrawPoint(rend, FL.x, FL.y); 
+	// SDL_RenderDrawPoint(rend, FL.x, FL.y); 
 	
 	angleR = fist1->GetAngle() + 45 * DEGTORAD;  // for front right corner
 	FR = b2Vec2(BoxToSDL(b2Vec2(fist1->GetPosition().x + diag * cos(angleR), fist1->GetPosition().y + diag * sin(angleR))));
-	SDL_RenderDrawPoint(rend, FR.x, FR.y); 
+	// SDL_RenderDrawPoint(rend, FR.x, FR.y); 
 	
 	angleR = fist1->GetAngle() + 225 * DEGTORAD;  // for back left corner
 	BL = b2Vec2(BoxToSDL(b2Vec2(fist1->GetPosition().x + diag * cos(angleR), fist1->GetPosition().y + diag * sin(angleR))));
-	SDL_RenderDrawPoint(rend, BL.x, BL.y); 
+	// SDL_RenderDrawPoint(rend, BL.x, BL.y); 
 	
 	angleR = fist1->GetAngle() + 315 * DEGTORAD;  // for back right corner
 	BR = b2Vec2(BoxToSDL(b2Vec2(fist1->GetPosition().x + diag * cos(angleR), fist1->GetPosition().y + diag * sin(angleR))));
-	SDL_RenderDrawPoint(rend, BR.x, BR.y); 
+	// SDL_RenderDrawPoint(rend, BR.x, BR.y); 
 	
 	// rendering four sides
-	SDL_RenderDrawLine(rend, FR.x, FR.y, FL.x, FL.y);
-	SDL_RenderDrawLine(rend, FR.x, FR.y, BR.x, BR.y);
-	SDL_RenderDrawLine(rend, BL.x, BL.y, BR.x, BR.y);
-	SDL_RenderDrawLine(rend, FL.x, FL.y, BL.x, BL.y);
+	// SDL_RenderDrawLine(rend, FR.x, FR.y, FL.x, FL.y);
+	// SDL_RenderDrawLine(rend, FR.x, FR.y, BR.x, BR.y);
+	// SDL_RenderDrawLine(rend, BL.x, BL.y, BR.x, BR.y);
+	// SDL_RenderDrawLine(rend, FL.x, FL.y, BL.x, BL.y);
+	
+	// renders fist1 with tex
+	// SDL_RenderDrawPoint(rend, BoxToSDL(fist1->GetWorldCenter()).x, BoxToSDL(fist1->GetWorldCenter()).y);
+	rect->w = BoxToSDL(length/2);
+	rect->h = BoxToSDL(length/2);
+	rect->x = BoxToSDL(fist1->GetWorldCenter() + b2Vec2(-1*length/4, length/4)).x;
+	rect->y = BoxToSDL(fist1->GetWorldCenter() + b2Vec2(-1*length/4, length/4)).y;
+	SDL_RenderCopyEx(rend, tex, NULL, rect, -1 * fist1->GetAngle() * RADTODEG, NULL, flip); // renderCopyEx does angles clockwise and in degrees
 	
 	/* fist2 */
 	diag = length / 2 * sqrt(2) / 2;  
@@ -260,25 +277,31 @@ void Player::render()
 	// rendering four corners
 	angleR = fist2->GetAngle() + 135 * DEGTORAD;  // for front left corner
 	FL = b2Vec2(BoxToSDL(b2Vec2(fist2->GetPosition().x + diag * cos(angleR), fist2->GetPosition().y + diag * sin(angleR))));
-	SDL_RenderDrawPoint(rend, FL.x, FL.y); 
+	// SDL_RenderDrawPoint(rend, FL.x, FL.y); 
 	
 	angleR = fist2->GetAngle() + 45 * DEGTORAD;  // for front right corner
 	FR = b2Vec2(BoxToSDL(b2Vec2(fist2->GetPosition().x + diag * cos(angleR), fist2->GetPosition().y + diag * sin(angleR))));
-	SDL_RenderDrawPoint(rend, FR.x, FR.y); 
+	// SDL_RenderDrawPoint(rend, FR.x, FR.y); 
 	
 	angleR = fist2->GetAngle() + 225 * DEGTORAD;  // for back left corner
 	BL = b2Vec2(BoxToSDL(b2Vec2(fist2->GetPosition().x + diag * cos(angleR), fist2->GetPosition().y + diag * sin(angleR))));
-	SDL_RenderDrawPoint(rend, BL.x, BL.y); 
+	// SDL_RenderDrawPoint(rend, BL.x, BL.y); 
 	
 	angleR = fist2->GetAngle() + 315 * DEGTORAD;  // for back right corner
 	BR = b2Vec2(BoxToSDL(b2Vec2(fist2->GetPosition().x + diag * cos(angleR), fist2->GetPosition().y + diag * sin(angleR))));
-	SDL_RenderDrawPoint(rend, BR.x, BR.y); 
+	// SDL_RenderDrawPoint(rend, BR.x, BR.y); 
 	
 	// rendering four sides
-	SDL_RenderDrawLine(rend, FR.x, FR.y, FL.x, FL.y);
-	SDL_RenderDrawLine(rend, FR.x, FR.y, BR.x, BR.y);
-	SDL_RenderDrawLine(rend, BL.x, BL.y, BR.x, BR.y);
-	SDL_RenderDrawLine(rend, FL.x, FL.y, BL.x, BL.y);
+	// SDL_RenderDrawLine(rend, FR.x, FR.y, FL.x, FL.y);
+	// SDL_RenderDrawLine(rend, FR.x, FR.y, BR.x, BR.y);
+	// SDL_RenderDrawLine(rend, BL.x, BL.y, BR.x, BR.y);
+	// SDL_RenderDrawLine(rend, FL.x, FL.y, BL.x, BL.y);
+	// renders fist2 with tex
+	rect->w = BoxToSDL(length/2);
+	rect->h = BoxToSDL(length/2);
+	rect->x = BoxToSDL(fist2->GetWorldCenter() + b2Vec2(-1*length/4, length/4)).x;
+	rect->y = BoxToSDL(fist2->GetWorldCenter() + b2Vec2(-1*length/4, length/4)).y;
+	SDL_RenderCopyEx(rend, tex, NULL, rect, -1 * fist2->GetAngle() * RADTODEG, NULL, flip); // renderCopyEx does angles clockwise and in degrees
 	
 	SDL_SetRenderDrawColor(rend, 0,0,0,255);
 }
