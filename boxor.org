@@ -72,6 +72,10 @@ wasd to move
 *** DONE texturing players
 - can't get fists to render, though body renders fine
   - fixed, it was because BoxToSDL casted input to int while input was a <1 float
+*** TODO implement arcade feel
+- [ ] titlescreen
+- [ ] scoring system
+- [ ] 640x480 border/arena
 *** TODO fix auto-completion
 - got the symbolic link going... and it appears to be exactly the same as boxor_back...
 - *make the smallest working example possible to understand what's going on*
@@ -85,10 +89,15 @@ wasd to move
 *** DONE decide whether or not to dissolve world class 
 *** separate version w dmg instead of void:
 - hmm, I'm leaning toward having an hp bar and that the boundaries are electric fences...
-- damage based on magnitude of normal force in collision to main body
-*** eventually change to rendering textures to make borders realistic
-*** and eventually add death animation (perhaps shrinking textures to represent falling)
+- damage based on collision data
 *** enable anti-aliasing or such to make textures look smooth (on rotation)
+*** limit max velocity by adjusting friction proportionally (this seems tough)
+- or maybe not, just translate "moving at a constant speed" to a higher dimension
+*** fix bug where can't move another player by pushing their fist
+*** add special moves such block
+- where fists a different set of fists, with revolute joints, rotate to front of body and fist-fist collision enabled
+- prismatic joint fists are temporarily disabled and not rendered
+- successful block gives bonus stamina or similar
 ** tips and trix
 *** if when running executable, input goes to terminal, resetting computer works! at least this time
 *** git checkout [commit hash]
@@ -102,4 +111,22 @@ wasd to move
 - [X] remove fist on fist collision
 *** v1.1.2
 - texturing of players
-  
+*** v1.1.3
+- what's next?
+- possible directions:
+  - somehow perfect mechanics 
+  - or other tools to make online multiplayer boxor, or direct connect dolphin sort of thing (netcode???)
+    - could do this, then later after people test, perfect mechanics (allows for much easier testing/feedback)
+      - *I like this idea the best so far*
+    - could send to gage and andrew lee for them to test and receive feedback first
+  - make macOS application for easy distribution? or just set up build instructions on github
+  - remember that old ideas can be borrowed and improved upon (cough cough Riot Games w/ Valorant)
+  - take slow time to think about it, can work on coding challenges + emacs core config in the meantime
+- so current plan of attack
+  1. first, gotta cut down on some shit, can't have too many possibilities, pick the best
+  2. make game fully arcade mode and presentable for testing (score system, titlescreen)
+     - change to standard 640x480 and area becomes the window borders 
+  3. allow others to test (need to include SDL2 frameworks on github for building), receive feedback
+  4. based on this, and coding branch tests (like trying revolute instead of prismatic joint), perfect mechanics as best as possible
+  5. work towards making online version
+     - this would be a huge step, maybe have to port to different engine/language
