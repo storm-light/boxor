@@ -57,6 +57,7 @@ source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_gamecon
 source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_gesture.h
 source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_haptic.h
 source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_hints.h
+source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_image.h
 source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_joystick.h
 source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_keyboard.h
 source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_keycode.h
@@ -82,6 +83,7 @@ source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_system.
 source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_thread.h
 source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_timer.h
 source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_touch.h
+source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_ttf.h
 source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_version.h
 source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/SDL_video.h
 source/CMakeFiles/BOXOR.dir/functions.cpp.o: /usr/local/include/SDL2/begin_code.h
@@ -260,6 +262,7 @@ source/CMakeFiles/BOXOR.dir/main.cpp.o: /usr/local/include/SDL2/SDL_system.h
 source/CMakeFiles/BOXOR.dir/main.cpp.o: /usr/local/include/SDL2/SDL_thread.h
 source/CMakeFiles/BOXOR.dir/main.cpp.o: /usr/local/include/SDL2/SDL_timer.h
 source/CMakeFiles/BOXOR.dir/main.cpp.o: /usr/local/include/SDL2/SDL_touch.h
+source/CMakeFiles/BOXOR.dir/main.cpp.o: /usr/local/include/SDL2/SDL_ttf.h
 source/CMakeFiles/BOXOR.dir/main.cpp.o: /usr/local/include/SDL2/SDL_version.h
 source/CMakeFiles/BOXOR.dir/main.cpp.o: /usr/local/include/SDL2/SDL_video.h
 source/CMakeFiles/BOXOR.dir/main.cpp.o: /usr/local/include/SDL2/begin_code.h

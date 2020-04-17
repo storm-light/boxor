@@ -17,8 +17,8 @@ World::World() {
 	fd.density = 1;
 	
 	bd.type = b2_staticBody;
-	// bd.position.Set(0, -5);  // below the origin some distance
-	// ground = world->CreateBody(&bd);
+	bd.position.Set(0, -5);  // below the origin some distance
+	ground = world->CreateBody(&bd);
 	
 	// esh.Set(b2Vec2(-10, 0), b2Vec2(10,0));
 	// fd.shape = &esh;
@@ -26,30 +26,30 @@ World::World() {
 
 	// bounds = new b2Body[4];
 	// top
-	bd.position.Set(0, 15);
-	bounds[0] = world->CreateBody(&bd);
-	esh.Set(b2Vec2(-15,0), b2Vec2(15, 0));
-	fd.shape = &esh;
-	fd.isSensor = true;
-	bounds[0]->CreateFixture(&fd);
-	// bot
-	bd.position.Set(0, -15);
-	bounds[1] = world->CreateBody(&bd);
-	esh.Set(b2Vec2(-15,0), b2Vec2(15, 0));
-	fd.shape = &esh;
-	bounds[1]->CreateFixture(&fd);
-	// left
-	bd.position.Set(-15, 0);
-	bounds[2] = world->CreateBody(&bd);
-	esh.Set(b2Vec2(0, -15), b2Vec2(0, 15));
-	fd.shape = &esh;
-	bounds[2]->CreateFixture(&fd);
-	// right
-	bd.position.Set(15, 0);
-	bounds[3] = world->CreateBody(&bd);
-	esh.Set(b2Vec2(0, -15), b2Vec2(0, 15));
-	fd.shape = &esh;
-	bounds[3]->CreateFixture(&fd);
+	// bd.position.Set(0, 15);
+	// bounds[0] = world->CreateBody(&bd);
+	// esh.Set(b2Vec2(-15,0), b2Vec2(15, 0));
+	// fd.shape = &esh;
+	// fd.isSensor = true;
+	// bounds[0]->CreateFixture(&fd);
+	// // bot
+	// bd.position.Set(0, -15);
+	// bounds[1] = world->CreateBody(&bd);
+	// esh.Set(b2Vec2(-15,0), b2Vec2(15, 0));
+	// fd.shape = &esh;
+	// bounds[1]->CreateFixture(&fd);
+	// // left
+	// bd.position.Set(-15, 0);
+	// bounds[2] = world->CreateBody(&bd);
+	// esh.Set(b2Vec2(0, -15), b2Vec2(0, 15));
+	// fd.shape = &esh;
+	// bounds[2]->CreateFixture(&fd);
+	// // right
+	// bd.position.Set(15, 0);
+	// bounds[3] = world->CreateBody(&bd);
+	// esh.Set(b2Vec2(0, -15), b2Vec2(0, 15));
+	// fd.shape = &esh;
+	// bounds[3]->CreateFixture(&fd);
 }
 
 World::~World() {
@@ -130,23 +130,23 @@ void World::updateMaxForceAndTorque(float spd, float angSpd)
 
 void World::render()
 {
-	SDL_SetRenderDrawColor(rend, 255,255,255,255);
+	// SDL_SetRenderDrawColor(rend, 255,255,255,255);
 	
-	// SDL_RenderDrawLine(rend, BoxToSDL(ground->GetPosition() - b2Vec2(10, 0)).x, BoxToSDL(ground->GetPosition()).y, BoxToSDL(ground->GetPosition() + b2Vec2(10, 0)).x, BoxToSDL(ground->GetPosition()).y);
-	// top
-	SDL_RenderDrawLine(rend, BoxToSDL(b2Vec2(-15, 15)).x, BoxToSDL(b2Vec2(-15, 15)).y, BoxToSDL(b2Vec2(15, 15)).x, BoxToSDL(b2Vec2(15, 15)).y);
-	// bot
-	SDL_RenderDrawLine(rend, BoxToSDL(b2Vec2(15, -15)).x, BoxToSDL(b2Vec2(15, -15)).y, BoxToSDL(b2Vec2(-15, -15)).x, BoxToSDL(b2Vec2(-15, -15)).y);
-	// left
-	SDL_RenderDrawLine(rend, BoxToSDL(b2Vec2(-15, 15)).x, BoxToSDL(b2Vec2(-15, 15)).y, BoxToSDL(b2Vec2(-15, -15)).x, BoxToSDL(b2Vec2(-15, -15)).y);
-	// right
-	SDL_RenderDrawLine(rend, BoxToSDL(b2Vec2(15, -15)).x, BoxToSDL(b2Vec2(15, -15)).y, BoxToSDL(b2Vec2(15, 15)).x, BoxToSDL(b2Vec2(15, 15)).y);
+	// // SDL_RenderDrawLine(rend, BoxToSDL(ground->GetPosition() - b2Vec2(10, 0)).x, BoxToSDL(ground->GetPosition()).y, BoxToSDL(ground->GetPosition() + b2Vec2(10, 0)).x, BoxToSDL(ground->GetPosition()).y);
+	// // top
+	// SDL_RenderDrawLine(rend, BoxToSDL(b2Vec2(-15, 15)).x, BoxToSDL(b2Vec2(-15, 15)).y, BoxToSDL(b2Vec2(15, 15)).x, BoxToSDL(b2Vec2(15, 15)).y);
+	// // bot
+	// SDL_RenderDrawLine(rend, BoxToSDL(b2Vec2(15, -15)).x, BoxToSDL(b2Vec2(15, -15)).y, BoxToSDL(b2Vec2(-15, -15)).x, BoxToSDL(b2Vec2(-15, -15)).y);
+	// // left
+	// SDL_RenderDrawLine(rend, BoxToSDL(b2Vec2(-15, 15)).x, BoxToSDL(b2Vec2(-15, 15)).y, BoxToSDL(b2Vec2(-15, -15)).x, BoxToSDL(b2Vec2(-15, -15)).y);
+	// // right
+	// SDL_RenderDrawLine(rend, BoxToSDL(b2Vec2(15, -15)).x, BoxToSDL(b2Vec2(15, -15)).y, BoxToSDL(b2Vec2(15, 15)).x, BoxToSDL(b2Vec2(15, 15)).y);
 	
-	SDL_SetRenderDrawColor(rend, 0,0,0,255);
+	// SDL_SetRenderDrawColor(rend, 0,0,0,255);
 	
 }
 
 b2Body* World::GetGround()
 {
-	return bounds[0];
+	return ground;
 }

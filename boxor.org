@@ -73,9 +73,10 @@ wasd to move
 - can't get fists to render, though body renders fine
   - fixed, it was because BoxToSDL casted input to int while input was a <1 float
 *** TODO implement arcade feel
-- [ ] titlescreen
+- [X] titlescreen
 - [ ] scoring system
-- [ ] 640x480 border/arena
+- [X] 640x480 border/arena
+- implement Loop::reset()
 *** TODO fix auto-completion
 - got the symbolic link going... and it appears to be exactly the same as boxor_back...
 - *make the smallest working example possible to understand what's going on*

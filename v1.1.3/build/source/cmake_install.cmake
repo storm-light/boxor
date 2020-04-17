@@ -1,4 +1,4 @@
-# Install script for directory: /Users/joshli/gaims/arcade/boxor/v1.1.2/source
+# Install script for directory: /Users/joshli/gaims/arcade/boxor/v1.1.3/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -30,5 +30,17 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/Users/joshli/gaims/arcade/boxor/v1.1.3/build/source/UbuntuMono.ttf")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/Users/joshli/gaims/arcade/boxor/v1.1.3/build/source" TYPE FILE FILES "/Users/joshli/gaims/arcade/boxor/v1.1.3/source/UbuntuMono.ttf")
 endif()
 

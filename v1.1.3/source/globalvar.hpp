@@ -1,8 +1,8 @@
 #ifndef _GLOBALVAR_HPP_
 #define _GLOBALVAR_HPP_
 
-#define WINDOW_WIDTH 1440
-#define WINDOW_HEIGHT 900
+#define WINDOW_WIDTH 640
+#define WINDOW_HEIGHT 480
 
 #define DEGTORAD 0.0174532925199432957f
 #define RADTODEG 57.295779513082320876f
@@ -19,6 +19,7 @@ extern bool requestExit;
 
 // extern b2World * world;
 extern int alpha;  // scale from box2d units to SDL pixels
+extern int leadingScore;
 
 enum entityCategory {
 	BOUNDARY = 0x01,

@@ -179,7 +179,9 @@ void Player::update()
 		stamina++;
 		if (stamina > 30) stamina = 30;
 	}
-	if (abs(body->GetWorldCenter().x) >= 15 || abs(body->GetWorldCenter().y) >= 15)
+	
+	// exits if player leaves window border
+	if (abs(body->GetWorldCenter().x) >= 16 || abs(body->GetWorldCenter().y) >= 12)
 	{
 		requestExit = 1;
 	}

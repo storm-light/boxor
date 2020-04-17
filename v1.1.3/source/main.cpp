@@ -1,4 +1,5 @@
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 #include <iostream>
 #include "globalvar.hpp"
 #include "loop.hpp"
@@ -11,6 +12,7 @@ SDL_Event event;
 bool requestExit = 0;
 // b2World * world;
 int alpha = 20;
+int leadingScore = 0;
 
 // function forward declaration
 bool init();
@@ -23,6 +25,8 @@ int main()
 		return 1;
 	}
 
+	titlescreen();
+	
 	Loop * gameLoop = new Loop();
 	while (!requestExit) {
 		
@@ -30,6 +34,17 @@ int main()
 		gameLoop->update();
 		gameLoop->render();
 		
+		if (requestExit)
+		{
+			if (leadingScore == 3)
+			{
+				break;
+			}
+			else
+			{
+				gameLoop->reset();	// implement this method
+			}
+		}
 	}
 
 	// SDL_Delay(3000);  // remove this later
@@ -38,6 +53,7 @@ int main()
 	// clean up
 	SDL_DestroyWindow(win);
 	SDL_DestroyRenderer(rend);
+    TTF_Quit();
 	SDL_Quit();
 	
 }
