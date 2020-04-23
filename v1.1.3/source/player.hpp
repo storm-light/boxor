@@ -38,6 +38,7 @@ class Player {	// super class of p1 and p2
 	b2Vec2 BR;	// back right
 	
 	SDL_Texture * tex;	// plain white texture for body and fists
+	SDL_Texture * red;	// to indicate depleted stamina
 	SDL_Rect * rect;
 	SDL_Point * center;
 	SDL_RendererFlip flip;
@@ -58,6 +59,7 @@ class Player {	// super class of p1 and p2
 	b2Body * GetBody();
 	b2Body * GetFist1();
 	b2Body * GetFist2();
+
 };
 
 #endif

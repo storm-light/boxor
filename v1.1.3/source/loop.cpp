@@ -17,6 +17,8 @@ Loop::Loop() {	// defines world (grav, timesteps), but not player body/fixtures
 	world->CreatePrismaticJoints(p1->GetAnchor(), p1->GetFist1(), p1->GetFist2());
 	world->CreatePrismaticJoints(p2->GetAnchor(), p2->GetFist1(), p2->GetFist2());
 
+	start = 0;
+	o = 1;
 }
 
 Loop::~Loop() {
@@ -62,6 +64,14 @@ void Loop::render() {
 	world->render();
 	p1->render();
 	p2->render();
+	
+	if (start < 30)
+		start++;
+	if (start >= 30 && o)
+	{
+		o = 0;
+		renderInstructions();
+	}
 	
 	SDL_RenderPresent(rend);
 	SDL_Delay(1000/60);

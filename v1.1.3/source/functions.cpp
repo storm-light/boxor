@@ -209,3 +209,16 @@ void renderScore()
 	SDL_SetRenderDrawColor(rend, 0,0,0,255);
 	SDL_Delay(2000);
 }
+
+void renderInstructions()
+{
+	
+	std::string s = "1 / 2";
+	SDL_SetRenderDrawColor(rend, 255,255,255,255);
+	renderText(s, "UbuntuMono.ttf", 20, WINDOW_WIDTH/2 - 160, WINDOW_HEIGHT/2 - 40);
+	s = ", / .";
+	renderText(s, "UbuntuMono.ttf", 20, WINDOW_WIDTH/2 + 160, WINDOW_HEIGHT/2 - 40);
+	SDL_RenderPresent(rend);
+	SDL_SetRenderDrawColor(rend, 0,0,0,255);
+	SDL_Delay(3000);
+}

@@ -72,23 +72,24 @@ wasd to move
 *** DONE texturing players
 - can't get fists to render, though body renders fine
   - fixed, it was because BoxToSDL casted input to int while input was a <1 float
-*** TODO implement arcade feel
+*** DONE implement arcade feel
 - [X] titlescreen
 - [X] scoring system
 - [X] 640x480 border/arena
-- [ ] quick instructions at beginning
-- [ ] add stamina bar
-- [ ] perhaps make bodies bullet because noclip seems to happen sometimes
+- [X] quick instructions at beginning
+- [X] add stamina bar
+  - SetTextureAlphaMod to indicate stamina
+- [X] perhaps make bodies bullet because noclip seems to happen sometimes
 - [X] perhaps optimize mechanics since too fast for such a small arena (or decrease scaling)
 - [X] implement Loop::reset()
-*** TODO fix auto-completion
+*** fix auto-completion
 - got the symbolic link going... and it appears to be exactly the same as boxor_back...
 - *make the smallest working example possible to understand what's going on*
   - this could be resolved by creating that emacs core config file
 - missing .ccls-cache or .ccls?
 - it might be the fault of company-mode since that's the auto-completion package
   - read into what each packages does
-*** TODO include SDL2 frameworks in a separate folder (later)
+*** include SDL2 frameworks in a separate folder (later)
 - *there should be a cleaner way to install libraries, rather than copying from /usr/local/Cellar, etc*
   - *try using frameworks* as they (libraries + headers) are nicely packaged together if possible
   - or can build shared library, so that they dependency locations are in the same place

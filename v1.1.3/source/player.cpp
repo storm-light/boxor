@@ -28,6 +28,7 @@ Player::Player(World * worldRef)  // both players share force mags initially
 	
 	// create fist1 and fist2 here
 	// other features of bodyDef and fixtureDef are already initialized above
+	bd.bullet = true;
 	bd.position.Set(-1 * length, 0);
 	fist1 = worldRef->CreateBody(&bd);
 	psh.SetAsBox(length/4, length/4);
@@ -44,6 +45,7 @@ Player::Player(World * worldRef)  // both players share force mags initially
 	fist2->CreateFixture(&fd);
 	
 	// creation of anchor (invisible body mimicking body)
+	bd.bullet = false;
 	bd.type = b2_kinematicBody;
 	bd.position.Set(-10, 0);  // change for p2
 	bd.angle = -90 * DEGTORAD;
@@ -63,8 +65,14 @@ Player::Player(World * worldRef)  // both players share force mags initially
 	stamina = 30;
 
 	tex = SDL_CreateTexture(rend, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, BoxToSDL(length), BoxToSDL(length)); // arbitrary width and height because whole texture is white
+	SDL_SetTextureBlendMode(tex, SDL_BLENDMODE_BLEND);
 	SDL_SetRenderTarget(rend, tex);					  // renders to tex
     SDL_SetRenderDrawColor(rend, 255, 255, 255, 255);  // white
+	SDL_RenderFillRect(rend, NULL);					   // colors the whole thing
+	SDL_SetRenderTarget(rend, NULL);				   // renders to default target
+	red = SDL_CreateTexture(rend, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, BoxToSDL(length), BoxToSDL(length)); // arbitrary width and height because whole texture is white
+	SDL_SetRenderTarget(rend, red);					  // renders to tex
+    SDL_SetRenderDrawColor(rend, 255, 0, 0, 255);  // red
 	SDL_RenderFillRect(rend, NULL);					   // colors the whole thing
 	SDL_SetRenderTarget(rend, NULL);				   // renders to default target
     SDL_SetRenderDrawColor(rend, 0, 0, 0, 255);  // back to default black
@@ -223,6 +231,11 @@ void Player::render()
 	// SDL_RenderDrawLine(rend, BL.x, BL.y, BR.x, BR.y);
 	// SDL_RenderDrawLine(rend, FL.x, FL.y, BL.x, BL.y);
 	
+			
+	// trying settexturealphamod
+    SDL_SetTextureAlphaMod(tex, (float) stamina * 205.0 / 30.0 + 50.0);
+
+	
 	// renders body with tex
 	// center.x = BoxToSDL(body->GetWorldCenter()).x;
 	// center.y = BoxToSDL(body->GetWorldCenter()).y;
@@ -321,8 +334,8 @@ void Player::reset()
 		body->SetAngularVelocity(0);
 		body->SetTransform(b2Vec2(10,0), 90 * DEGTORAD);
 		anchor->SetTransform(b2Vec2(10,0), 90 * DEGTORAD);
-		fist1->SetTransform(anchor->GetPosition() + b2Vec2(0, length), fist1->GetAngle());
-		fist2->SetTransform(anchor->GetPosition() - b2Vec2(0, length), fist2->GetAngle());
+		fist1->SetTransform(b2Vec2(0, length), 0);
+		fist2->SetTransform(b2Vec2(0, length), 0);
 	}
 	else
 	{
@@ -330,8 +343,8 @@ void Player::reset()
 		body->SetAngularVelocity(0);
 		body->SetTransform(b2Vec2(-10,0), -90 * DEGTORAD);
 		anchor->SetTransform(b2Vec2(-10,0), -90 * DEGTORAD);
-		fist1->SetTransform(anchor->GetPosition() + b2Vec2(0, length), fist1->GetAngle());
-		fist2->SetTransform(anchor->GetPosition() - b2Vec2(0, length), fist2->GetAngle());
+		fist1->SetTransform(b2Vec2(0, length), 0);
+		fist2->SetTransform(b2Vec2(0, length), 0);
 	}
 	
 }

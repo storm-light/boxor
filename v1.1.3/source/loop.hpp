@@ -27,6 +27,9 @@ class Loop {
     void update();
     void render();
 	void reset();  // when a player gets knocked out
+
+	int start;
+	bool o;
 	
 };
 	
