@@ -16,10 +16,12 @@ extern SDL_Window * win;
 extern SDL_Renderer * rend;
 extern SDL_Event event;
 extern bool requestExit;
+extern bool deathEvent;
 
 // extern b2World * world;
 extern int alpha;  // scale from box2d units to SDL pixels
-extern int leadingScore;
+extern int p1Score;
+extern int p2Score;
 
 enum entityCategory {
 	BOUNDARY = 0x01,

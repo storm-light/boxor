@@ -52,6 +52,7 @@ class Player {	// super class of p1 and p2
 	void handleEvents();
 	void update();
 	void render();
+	void reset();
 	
 	b2Body * GetAnchor();
 	b2Body * GetBody();

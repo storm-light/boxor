@@ -3,6 +3,7 @@
 #include <SDL2/SDL_ttf.h>
 #include "globalvar.hpp"
 #include <iostream>
+#include <string>
 
 bool init()
 {
@@ -192,4 +193,19 @@ void renderText(std::string message, std::string fontFile, int fontSize, int x, 
     SDL_FreeSurface(surf);
     SDL_DestroyTexture(texture); // fucking TwinkleBear Dev FUCK HIM
 	TTF_CloseFont(font);
+}
+
+void renderScore()
+{
+	std::string s;
+	s.append(std::to_string(p1Score));
+	s.append(1, '-');
+	s.append(std::to_string(p2Score));
+	SDL_SetRenderDrawColor(rend, 0,0,0,255);
+	SDL_RenderClear(rend);
+	SDL_SetRenderDrawColor(rend, 255,255,255,255);
+	renderText(s, "UbuntuMono.ttf", 100, WINDOW_WIDTH/2, WINDOW_HEIGHT/2);
+	SDL_RenderPresent(rend);
+	SDL_SetRenderDrawColor(rend, 0,0,0,255);
+	SDL_Delay(2000);
 }

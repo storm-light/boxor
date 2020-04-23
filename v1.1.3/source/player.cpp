@@ -181,9 +181,11 @@ void Player::update()
 	}
 	
 	// exits if player leaves window border
-	if (abs(body->GetWorldCenter().x) >= 16 || abs(body->GetWorldCenter().y) >= 12)
+	if (abs(body->GetWorldCenter().x) >= 20 || abs(body->GetWorldCenter().y) >= 15)
 	{
-		requestExit = 1;
+		if (playerNumber == 1) p2Score++;
+		else p1Score++;
+		deathEvent = 1;
 	}
 	
 }
@@ -308,6 +310,32 @@ void Player::render()
 	SDL_SetRenderDrawColor(rend, 0,0,0,255);
 }
 	
+void Player::reset()
+{
+	key1 = 0;
+	key2 = 0;
+	stamina = 30;
+	if (playerNumber == 2)
+	{
+		body->SetLinearVelocity(b2Vec2(0,0));
+		body->SetAngularVelocity(0);
+		body->SetTransform(b2Vec2(10,0), 90 * DEGTORAD);
+		anchor->SetTransform(b2Vec2(10,0), 90 * DEGTORAD);
+		fist1->SetTransform(anchor->GetPosition() + b2Vec2(0, length), fist1->GetAngle());
+		fist2->SetTransform(anchor->GetPosition() - b2Vec2(0, length), fist2->GetAngle());
+	}
+	else
+	{
+		body->SetLinearVelocity(b2Vec2(0,0));
+		body->SetAngularVelocity(0);
+		body->SetTransform(b2Vec2(-10,0), -90 * DEGTORAD);
+		anchor->SetTransform(b2Vec2(-10,0), -90 * DEGTORAD);
+		fist1->SetTransform(anchor->GetPosition() + b2Vec2(0, length), fist1->GetAngle());
+		fist2->SetTransform(anchor->GetPosition() - b2Vec2(0, length), fist2->GetAngle());
+	}
+	
+}
+
 void Player::P1_Init()
 {
 	playerNumber = 1;

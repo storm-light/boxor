@@ -74,9 +74,13 @@ wasd to move
   - fixed, it was because BoxToSDL casted input to int while input was a <1 float
 *** TODO implement arcade feel
 - [X] titlescreen
-- [ ] scoring system
+- [X] scoring system
 - [X] 640x480 border/arena
-- implement Loop::reset()
+- [ ] quick instructions at beginning
+- [ ] add stamina bar
+- [ ] perhaps make bodies bullet because noclip seems to happen sometimes
+- [X] perhaps optimize mechanics since too fast for such a small arena (or decrease scaling)
+- [X] implement Loop::reset()
 *** TODO fix auto-completion
 - got the symbolic link going... and it appears to be exactly the same as boxor_back...
 - *make the smallest working example possible to understand what's going on*
@@ -84,6 +88,12 @@ wasd to move
 - missing .ccls-cache or .ccls?
 - it might be the fault of company-mode since that's the auto-completion package
   - read into what each packages does
+*** TODO include SDL2 frameworks in a separate folder (later)
+- *there should be a cleaner way to install libraries, rather than copying from /usr/local/Cellar, etc*
+  - *try using frameworks* as they (libraries + headers) are nicely packaged together if possible
+  - or can build shared library, so that they dependency locations are in the same place
+    - problem is, the configure file builds the library to /usr/local/lib/
+    - READ blog
 ** nice features
 *** DONE figure out a way to make p1, p2 code more efficient, less duplicate code 
 - [X] get rid of p1,p2 class entirely, just create p1_init method in player, remove includes of "p1.hpp", etc

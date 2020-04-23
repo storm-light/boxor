@@ -10,9 +10,11 @@ SDL_Window * win;
 SDL_Renderer * rend;
 SDL_Event event;
 bool requestExit = 0;
+bool deathEvent = 0;
 // b2World * world;
-int alpha = 20;
-int leadingScore = 0;
+int alpha = 16;
+int p1Score = 0;
+int p2Score = 0;
 
 // function forward declaration
 bool init();
@@ -34,18 +36,21 @@ int main()
 		gameLoop->update();
 		gameLoop->render();
 		
-		if (requestExit)
+		if (deathEvent)
 		{
-			if (leadingScore == 3)
+			if (p1Score == 3 || p2Score == 3)
 			{
 				break;
 			}
 			else
 			{
+				renderScore();
 				gameLoop->reset();	// implement this method
+				deathEvent = 0;
 			}
 		}
 	}
+	renderScore();
 
 	// SDL_Delay(3000);  // remove this later
 	gameLoop->~Loop();

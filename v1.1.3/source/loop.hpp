@@ -26,6 +26,7 @@ class Loop {
 	void handleEvents();
     void update();
     void render();
+	void reset();  // when a player gets knocked out
 	
 };
 	

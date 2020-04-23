@@ -67,3 +67,9 @@ void Loop::render() {
 	SDL_Delay(1000/60);
 	
 }
+
+void Loop::reset()
+{
+	p1->reset();
+	p2->reset();
+}

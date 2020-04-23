@@ -66,6 +66,7 @@ source/CMakeFiles/BOXOR.dir/functions.cpp.o
  /usr/local/include/SDL2/SDL_log.h
  /usr/local/include/SDL2/SDL_main.h
  /usr/local/include/SDL2/SDL_messagebox.h
+ /usr/local/include/SDL2/SDL_metal.h
  /usr/local/include/SDL2/SDL_mouse.h
  /usr/local/include/SDL2/SDL_mutex.h
  /usr/local/include/SDL2/SDL_pixels.h
@@ -156,6 +157,7 @@ source/CMakeFiles/BOXOR.dir/loop.cpp.o
  /usr/local/include/SDL2/SDL_log.h
  /usr/local/include/SDL2/SDL_main.h
  /usr/local/include/SDL2/SDL_messagebox.h
+ /usr/local/include/SDL2/SDL_metal.h
  /usr/local/include/SDL2/SDL_mouse.h
  /usr/local/include/SDL2/SDL_mutex.h
  /usr/local/include/SDL2/SDL_pixels.h
@@ -245,6 +247,7 @@ source/CMakeFiles/BOXOR.dir/main.cpp.o
  /usr/local/include/SDL2/SDL_log.h
  /usr/local/include/SDL2/SDL_main.h
  /usr/local/include/SDL2/SDL_messagebox.h
+ /usr/local/include/SDL2/SDL_metal.h
  /usr/local/include/SDL2/SDL_mouse.h
  /usr/local/include/SDL2/SDL_mutex.h
  /usr/local/include/SDL2/SDL_pixels.h
@@ -334,6 +337,7 @@ source/CMakeFiles/BOXOR.dir/player.cpp.o
  /usr/local/include/SDL2/SDL_log.h
  /usr/local/include/SDL2/SDL_main.h
  /usr/local/include/SDL2/SDL_messagebox.h
+ /usr/local/include/SDL2/SDL_metal.h
  /usr/local/include/SDL2/SDL_mouse.h
  /usr/local/include/SDL2/SDL_mutex.h
  /usr/local/include/SDL2/SDL_pixels.h
@@ -421,6 +425,7 @@ source/CMakeFiles/BOXOR.dir/world.cpp.o
  /usr/local/include/SDL2/SDL_log.h
  /usr/local/include/SDL2/SDL_main.h
  /usr/local/include/SDL2/SDL_messagebox.h
+ /usr/local/include/SDL2/SDL_metal.h
  /usr/local/include/SDL2/SDL_mouse.h
  /usr/local/include/SDL2/SDL_mutex.h
  /usr/local/include/SDL2/SDL_pixels.h
