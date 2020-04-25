@@ -16,5 +16,11 @@ make install
 
 ## Dependencies
 
-The executable will look for SDL2 and SDL2_ttf binaries in /Library/Frameworks before running. SDL2 frameworks also require dependencies usually found in /usr/lib
+Temporarily, macOS users need to install header files for the SDL2 libraries. This can be done with brew:
+
+```
+brew install sdl2
+brew install sdl2_ttf
+brew install sdl2_image
+```
 
