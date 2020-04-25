@@ -142,3 +142,5 @@ wasd to move
   4. based on this, and coding branch tests (like trying revolute instead of prismatic joint), perfect mechanics as best as possible
   5. work towards making online version
      - this would be a huge step, maybe have to port to different engine/language
+*** v1.1.4
+- possibly able to run executable in build tree independent from system frameworks
