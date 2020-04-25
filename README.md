@@ -16,5 +16,5 @@ make install
 
 ## Dependencies
 
-The executable will look for SDL2 and SDL2_ttf binaries in /Library/Frameworks before running.
+The executable will look for SDL2 and SDL2_ttf binaries in /Library/Frameworks before running. SDL2 frameworks also require dependencies usually found in /usr/lib
 
