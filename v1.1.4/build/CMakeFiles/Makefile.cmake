@@ -12,6 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.14.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.14.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.14.2/CMakeSystem.cmake"
+  "../frameworks/CMakeLists.txt"
   "../source/CMakeLists.txt"
   "/usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/local/Cellar/cmake/3.14.2/share/cmake/Modules/CMakeCXXInformation.cmake"
@@ -51,6 +52,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "Box2D/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "frameworks/CMakeFiles/CMakeDirectoryInformation.cmake"
   "source/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

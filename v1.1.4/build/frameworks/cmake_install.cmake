@@ -1,4 +1,4 @@
-# Install script for directory: /Users/joshli/gaims/arcade/boxor/v1.1.3/frameworks
+# Install script for directory: /Users/joshli/gaims/arcade/boxor/v1.1.4/frameworks
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,17 +34,13 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/Users/joshli/gaims/arcade/boxor/v1.1.3/build/frameworks/libSDL2.dylib;/Users/joshli/gaims/arcade/boxor/v1.1.3/build/frameworks/libSDL2_ttf.dylib;/Users/joshli/gaims/arcade/boxor/v1.1.3/build/frameworks/libSDL2_image.dylib")
+   "/Users/joshli/gaims/arcade/boxor/v1.1.4/build/frameworks/")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/Users/joshli/gaims/arcade/boxor/v1.1.3/build/frameworks" TYPE FILE FILES
-    "/Users/joshli/gaims/arcade/boxor/v1.1.3/frameworks/libSDL2.dylib"
-    "/Users/joshli/gaims/arcade/boxor/v1.1.3/frameworks/libSDL2_ttf.dylib"
-    "/Users/joshli/gaims/arcade/boxor/v1.1.3/frameworks/libSDL2_image.dylib"
-    )
+file(INSTALL DESTINATION "/Users/joshli/gaims/arcade/boxor/v1.1.4/build/frameworks" TYPE DIRECTORY FILES "/Users/joshli/gaims/arcade/boxor/v1.1.4/frameworks/./")
 endif()
 
