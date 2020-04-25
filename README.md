@@ -2,9 +2,7 @@
 
 ## Use
 
-From the root of the project, the executable can be run with ./v1.1.3/build/source/BOXOR
-
-This project uses CMake, so to build from scratch, remove and create a new build dir:
+This project uses frameworks; it can only be used by macOS users. To create a working executable, at the root of the project, run:   
 
 ```
 rm -rf build
