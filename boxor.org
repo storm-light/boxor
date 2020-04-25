@@ -46,7 +46,7 @@ wasd to move
 *** DONE add arena and void
 - for now, getting knocked out means body->center is outside
 *** DONE add p2 
-*** TODO improving mechanics
+*** DONE improving mechanics
 - [X] possible solution 1
   - create static body that mimics pos, ang of body
   - have joints w fists link with this teleporting static body (no fixtures)
@@ -55,33 +55,90 @@ wasd to move
   - this can allow for greater fist density without affecting body rotation
 - [X] let punch affect rotation to variable extent (no longer dependent only on prismatic joint)
   - dayum, the kinematic solution just made this game look so much better, rotation works also
-- [ ] find a way to let rotation not totally affect punching power
-  - has a bug where sometimes it doesn't appear to punch (some motor force is still being applied)
-    - rotation has effect on power of punch, stopping rotation shows punches are normal
+- [X] find a way to let rotation not totally affect punching power
   - *maybe have a constant force on the other fist that prevents it from sliding forwards and backwards on rotation*
     - dude its actually starting to flow really nicely!!! by using forces instead of impulses
-  - the rotation impulse seems a bit rigid; try to make more smooth if possible
-    - this might also solve the weak punch problem
     - instead of impulse, apply force for timed amount (this can also prevent spammable punches)
-      - [ ] timed amount (like a stamina bar)
-*** TODO fix ccls
+      - [X] timed amount (like a stamina bar)
+*** DONE make fists not collide with fists; collision filtering
+- might be necessary since forces on fist don't impact movement of body
+- this doesn't fix bug where body can't push other body through forces impacting fists
+  - however, this may not be fixable bc if we were to disable fist-body collision and re-enable within fist is in body, it would super spazz?
+  - read "anatomy of a collision" to find out
+  - but even if implementable, might be a good idea to come back to it in v2.0 or later
+    - mechanics are satisfying for now
+    - mechanics may need updates when actual multiplayer is tested
+- could allow collision on special moves like "block"
+*** DONE texturing players
+- can't get fists to render, though body renders fine
+  - fixed, it was because BoxToSDL casted input to int while input was a <1 float
+*** DONE implement arcade feel
+- [X] titlescreen
+- [X] scoring system
+- [X] 640x480 border/arena
+- [X] quick instructions at beginning
+- [X] add stamina bar
+  - SetTextureAlphaMod to indicate stamina
+- [X] perhaps make bodies bullet because noclip seems to happen sometimes
+- [X] perhaps optimize mechanics since too fast for such a small arena (or decrease scaling)
+- [X] implement Loop::reset()
+*** fix auto-completion
 - got the symbolic link going... and it appears to be exactly the same as boxor_back...
-- make the smallest working example possible to understand what's going on
+- *make the smallest working example possible to understand what's going on*
+  - this could be resolved by creating that emacs core config file
+- missing .ccls-cache or .ccls?
+- it might be the fault of company-mode since that's the auto-completion package
+  - read into what each packages does
+*** include SDL2 frameworks in a separate folder (later)
+- *there should be a cleaner way to install libraries, rather than copying from /usr/local/Cellar, etc*
+  - *try using frameworks* as they (libraries + headers) are nicely packaged together if possible
+  - or can build shared library, so that they dependency locations are in the same place
+    - problem is, the configure file builds the library to /usr/local/lib/
+    - READ blog
 ** nice features
 *** DONE figure out a way to make p1, p2 code more efficient, less duplicate code 
 - [X] get rid of p1,p2 class entirely, just create p1_init method in player, remove includes of "p1.hpp", etc
 *** DONE decide whether or not to dissolve world class 
-*** make fists not collide with body
 *** separate version w dmg instead of void:
 - hmm, I'm leaning toward having an hp bar and that the boundaries are electric fences...
-- damage based on magnitude of normal force in collision to main body
-*** eventually change to rendering textures to make borders realistic
-*** and eventually add death animation (perhaps shrinking textures to represent falling)
+- damage based on collision data
+*** enable anti-aliasing or such to make textures look smooth (on rotation)
+*** limit max velocity by adjusting friction proportionally (this seems tough)
+- or maybe not, just translate "moving at a constant speed" to a higher dimension
+*** fix bug where can't move another player by pushing their fist
+*** add special moves such block
+- where fists a different set of fists, with revolute joints, rotate to front of body and fist-fist collision enabled
+- prismatic joint fists are temporarily disabled and not rendered
+- successful block gives bonus stamina or similar
 ** tips and trix
 *** if when running executable, input goes to terminal, resetting computer works! at least this time
+*** git checkout [commit hash]
 ** current version details
-*** v1.1 
+*** v1.1
 - uses anchor (kinematic body), instead of direct prismatic joint between fist and body
   - allows for high impact punches (fist density increased without affecting rotation)
 - applies high magnitude force/torque into fists and body instead of impulse
 - other fist is subjected to negating force
+*** v1.1.1
+- [X] remove fist on fist collision
+*** v1.1.2
+- texturing of players
+*** v1.1.3
+- what's next?
+- possible directions:
+  - somehow perfect mechanics 
+  - or other tools to make online multiplayer boxor, or direct connect dolphin sort of thing (netcode???)
+    - could do this, then later after people test, perfect mechanics (allows for much easier testing/feedback)
+      - *I like this idea the best so far*
+    - could send to gage and andrew lee for them to test and receive feedback first
+  - make macOS application for easy distribution? or just set up build instructions on github
+  - remember that old ideas can be borrowed and improved upon (cough cough Riot Games w/ Valorant)
+  - take slow time to think about it, can work on coding challenges + emacs core config in the meantime
+- so current plan of attack
+  1. first, gotta cut down on some shit, can't have too many possibilities, pick the best
+  2. make game fully arcade mode and presentable for testing (score system, titlescreen)
+     - change to standard 640x480 and area becomes the window borders 
+  3. allow others to test (need to include SDL2 frameworks on github for building), receive feedback
+  4. based on this, and coding branch tests (like trying revolute instead of prismatic joint), perfect mechanics as best as possible
+  5. work towards making online version
+     - this would be a huge step, maybe have to port to different engine/language
