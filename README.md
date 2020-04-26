@@ -12,7 +12,7 @@ cmake ..
 make install
 ```
 
-If cmake is not install, it is recommended to use Homebrew:
+If cmake is not install, it is recommended to use [Homebrew](https://brew.sh/):
 ```
 brew install cmake
 ```
