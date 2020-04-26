@@ -2,7 +2,7 @@
 
 ## Use
 
-This project uses frameworks; it can only be used by macOS users. To create a working executable, at the root of the project, run:   
+This project utilizes frameworks; it can only be used by macOS users. To create a working executable, at the root of the project, run:   
 
 ```
 rm -rf build
