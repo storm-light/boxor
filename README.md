@@ -11,14 +11,3 @@ cd build
 cmake ..
 make install
 ```
-
-## Dependencies
-
-Temporarily, macOS users need to install header files for the SDL2 libraries. This can be done with brew:
-
-```
-brew install sdl2
-brew install sdl2_ttf
-brew install sdl2_image
-```
-
