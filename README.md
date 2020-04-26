@@ -2,7 +2,7 @@
 
 ## Use
 
-This project utilizes frameworks; it can only be used by macOS users. To create a working executable, at the root of the project, run:   
+This project utilizes SDL2 frameworks; it can only be used by macOS users. To create a working executable, at the root of the project, run:   
 
 ```
 rm -rf build
