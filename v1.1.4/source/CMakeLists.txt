@@ -18,7 +18,8 @@ SET(RESOURCE_FILES
 INSTALL(FILES ${RESOURCE_FILES} DESTINATION ${BOXOR_BINARY_DIR}/source) #installs ttf file
 # INSTALL(FILES ${SDL2_LIBRARIES} ${SDL2TTF_LIBRARIES} ${SDL2TTF_LIBRARIES} DESTINATION ${BOXOR_BINARY_DIR}/frameworks) #installing libraries into frameworks/
 
-INCLUDE_DIRECTORIES(/usr/local/include ../) # this is for compiler to find header files in order to build
+# INCLUDE_DIRECTORIES(/usr/local/include ../) # this is for compiler to find header files in order to build
+INCLUDE_DIRECTORIES(../)
 
 # Specify directories in which the linker will look for libraries.
 # LINK_DIRECTORIES(${CMAKE_SOURCE_DIR}/frameworks) # wait this line is might unnecessary, but it's generally the -L[directory of library] step in compiling

@@ -8,7 +8,7 @@
 #define RADTODEG 57.295779513082320876f
 
 #include <Box2D/Box2D.h>
-#include <SDL2/SDL.h>
+#include "SDL2/SDL.h"
 #include <iostream>
 #include "functions.hpp"
 

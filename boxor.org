@@ -144,3 +144,4 @@ wasd to move
      - this would be a huge step, maybe have to port to different engine/language
 *** v1.1.4
 - possibly able to run executable in build tree independent from system frameworks
+- [ ] looks like rpath is an absolute path to the frameworks in CMAKE_SOURCE_DIR, so may not need to install in build directory after all, test this

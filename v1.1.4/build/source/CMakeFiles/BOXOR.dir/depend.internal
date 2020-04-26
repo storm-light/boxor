@@ -39,57 +39,57 @@ source/CMakeFiles/BOXOR.dir/functions.cpp.o
  ../source/../Box2D/Dynamics/b2TimeStep.h
  ../source/../Box2D/Dynamics/b2World.h
  ../source/../Box2D/Dynamics/b2WorldCallbacks.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_assert.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_atomic.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_audio.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_blendmode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_clipboard.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_config.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_cpuinfo.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_endian.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_error.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_events.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_filesystem.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_gamecontroller.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_gesture.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_haptic.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_hints.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_image.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_joystick.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_keyboard.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_keycode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_loadso.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_log.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_main.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_messagebox.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_metal.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_mouse.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_mutex.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_pixels.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_platform.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_power.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_quit.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_rect.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_render.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_rwops.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_scancode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_sensor.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_shape.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_stdinc.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_surface.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_system.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_thread.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_timer.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_touch.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_ttf.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_version.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_video.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/begin_code.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/close_code.h
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/functions.cpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/functions.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/globalvar.hpp
- /usr/local/include/SDL2/SDL.h
- /usr/local/include/SDL2/SDL_assert.h
- /usr/local/include/SDL2/SDL_atomic.h
- /usr/local/include/SDL2/SDL_audio.h
- /usr/local/include/SDL2/SDL_blendmode.h
- /usr/local/include/SDL2/SDL_clipboard.h
- /usr/local/include/SDL2/SDL_config.h
- /usr/local/include/SDL2/SDL_cpuinfo.h
- /usr/local/include/SDL2/SDL_endian.h
- /usr/local/include/SDL2/SDL_error.h
- /usr/local/include/SDL2/SDL_events.h
- /usr/local/include/SDL2/SDL_filesystem.h
- /usr/local/include/SDL2/SDL_gamecontroller.h
- /usr/local/include/SDL2/SDL_gesture.h
- /usr/local/include/SDL2/SDL_haptic.h
- /usr/local/include/SDL2/SDL_hints.h
- /usr/local/include/SDL2/SDL_image.h
- /usr/local/include/SDL2/SDL_joystick.h
- /usr/local/include/SDL2/SDL_keyboard.h
- /usr/local/include/SDL2/SDL_keycode.h
- /usr/local/include/SDL2/SDL_loadso.h
- /usr/local/include/SDL2/SDL_log.h
- /usr/local/include/SDL2/SDL_main.h
- /usr/local/include/SDL2/SDL_messagebox.h
- /usr/local/include/SDL2/SDL_metal.h
- /usr/local/include/SDL2/SDL_mouse.h
- /usr/local/include/SDL2/SDL_mutex.h
- /usr/local/include/SDL2/SDL_pixels.h
- /usr/local/include/SDL2/SDL_platform.h
- /usr/local/include/SDL2/SDL_power.h
- /usr/local/include/SDL2/SDL_quit.h
- /usr/local/include/SDL2/SDL_rect.h
- /usr/local/include/SDL2/SDL_render.h
- /usr/local/include/SDL2/SDL_rwops.h
- /usr/local/include/SDL2/SDL_scancode.h
- /usr/local/include/SDL2/SDL_sensor.h
- /usr/local/include/SDL2/SDL_shape.h
- /usr/local/include/SDL2/SDL_stdinc.h
- /usr/local/include/SDL2/SDL_surface.h
- /usr/local/include/SDL2/SDL_system.h
- /usr/local/include/SDL2/SDL_thread.h
- /usr/local/include/SDL2/SDL_timer.h
- /usr/local/include/SDL2/SDL_touch.h
- /usr/local/include/SDL2/SDL_ttf.h
- /usr/local/include/SDL2/SDL_version.h
- /usr/local/include/SDL2/SDL_video.h
- /usr/local/include/SDL2/begin_code.h
- /usr/local/include/SDL2/close_code.h
 source/CMakeFiles/BOXOR.dir/loop.cpp.o
  ../source/../Box2D/Box2D.h
  ../source/../Box2D/Collision/Shapes/b2ChainShape.h
@@ -128,58 +128,58 @@ source/CMakeFiles/BOXOR.dir/loop.cpp.o
  ../source/../Box2D/Dynamics/b2TimeStep.h
  ../source/../Box2D/Dynamics/b2World.h
  ../source/../Box2D/Dynamics/b2WorldCallbacks.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_assert.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_atomic.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_audio.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_blendmode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_clipboard.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_config.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_cpuinfo.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_endian.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_error.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_events.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_filesystem.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_gamecontroller.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_gesture.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_haptic.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_hints.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_joystick.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_keyboard.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_keycode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_loadso.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_log.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_main.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_messagebox.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_metal.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_mouse.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_mutex.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_pixels.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_platform.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_power.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_quit.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_rect.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_render.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_rwops.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_scancode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_sensor.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_shape.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_stdinc.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_surface.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_system.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_thread.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_timer.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_touch.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_version.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_video.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/begin_code.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/close_code.h
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/functions.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/globalvar.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/loop.cpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/loop.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/player.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/world.hpp
- /usr/local/include/SDL2/SDL.h
- /usr/local/include/SDL2/SDL_assert.h
- /usr/local/include/SDL2/SDL_atomic.h
- /usr/local/include/SDL2/SDL_audio.h
- /usr/local/include/SDL2/SDL_blendmode.h
- /usr/local/include/SDL2/SDL_clipboard.h
- /usr/local/include/SDL2/SDL_config.h
- /usr/local/include/SDL2/SDL_cpuinfo.h
- /usr/local/include/SDL2/SDL_endian.h
- /usr/local/include/SDL2/SDL_error.h
- /usr/local/include/SDL2/SDL_events.h
- /usr/local/include/SDL2/SDL_filesystem.h
- /usr/local/include/SDL2/SDL_gamecontroller.h
- /usr/local/include/SDL2/SDL_gesture.h
- /usr/local/include/SDL2/SDL_haptic.h
- /usr/local/include/SDL2/SDL_hints.h
- /usr/local/include/SDL2/SDL_joystick.h
- /usr/local/include/SDL2/SDL_keyboard.h
- /usr/local/include/SDL2/SDL_keycode.h
- /usr/local/include/SDL2/SDL_loadso.h
- /usr/local/include/SDL2/SDL_log.h
- /usr/local/include/SDL2/SDL_main.h
- /usr/local/include/SDL2/SDL_messagebox.h
- /usr/local/include/SDL2/SDL_metal.h
- /usr/local/include/SDL2/SDL_mouse.h
- /usr/local/include/SDL2/SDL_mutex.h
- /usr/local/include/SDL2/SDL_pixels.h
- /usr/local/include/SDL2/SDL_platform.h
- /usr/local/include/SDL2/SDL_power.h
- /usr/local/include/SDL2/SDL_quit.h
- /usr/local/include/SDL2/SDL_rect.h
- /usr/local/include/SDL2/SDL_render.h
- /usr/local/include/SDL2/SDL_rwops.h
- /usr/local/include/SDL2/SDL_scancode.h
- /usr/local/include/SDL2/SDL_sensor.h
- /usr/local/include/SDL2/SDL_shape.h
- /usr/local/include/SDL2/SDL_stdinc.h
- /usr/local/include/SDL2/SDL_surface.h
- /usr/local/include/SDL2/SDL_system.h
- /usr/local/include/SDL2/SDL_thread.h
- /usr/local/include/SDL2/SDL_timer.h
- /usr/local/include/SDL2/SDL_touch.h
- /usr/local/include/SDL2/SDL_version.h
- /usr/local/include/SDL2/SDL_video.h
- /usr/local/include/SDL2/begin_code.h
- /usr/local/include/SDL2/close_code.h
 source/CMakeFiles/BOXOR.dir/main.cpp.o
  ../source/../Box2D/Box2D.h
  ../source/../Box2D/Collision/Shapes/b2ChainShape.h
@@ -218,59 +218,59 @@ source/CMakeFiles/BOXOR.dir/main.cpp.o
  ../source/../Box2D/Dynamics/b2TimeStep.h
  ../source/../Box2D/Dynamics/b2World.h
  ../source/../Box2D/Dynamics/b2WorldCallbacks.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_assert.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_atomic.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_audio.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_blendmode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_clipboard.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_config.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_cpuinfo.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_endian.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_error.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_events.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_filesystem.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_gamecontroller.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_gesture.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_haptic.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_hints.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_joystick.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_keyboard.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_keycode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_loadso.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_log.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_main.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_messagebox.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_metal.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_mouse.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_mutex.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_pixels.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_platform.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_power.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_quit.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_rect.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_render.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_rwops.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_scancode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_sensor.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_shape.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_stdinc.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_surface.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_system.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_thread.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_timer.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_touch.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_ttf.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_version.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_video.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/begin_code.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/close_code.h
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/functions.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/globalvar.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/loop.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/main.cpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/player.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/world.hpp
- /usr/local/include/SDL2/SDL.h
- /usr/local/include/SDL2/SDL_assert.h
- /usr/local/include/SDL2/SDL_atomic.h
- /usr/local/include/SDL2/SDL_audio.h
- /usr/local/include/SDL2/SDL_blendmode.h
- /usr/local/include/SDL2/SDL_clipboard.h
- /usr/local/include/SDL2/SDL_config.h
- /usr/local/include/SDL2/SDL_cpuinfo.h
- /usr/local/include/SDL2/SDL_endian.h
- /usr/local/include/SDL2/SDL_error.h
- /usr/local/include/SDL2/SDL_events.h
- /usr/local/include/SDL2/SDL_filesystem.h
- /usr/local/include/SDL2/SDL_gamecontroller.h
- /usr/local/include/SDL2/SDL_gesture.h
- /usr/local/include/SDL2/SDL_haptic.h
- /usr/local/include/SDL2/SDL_hints.h
- /usr/local/include/SDL2/SDL_joystick.h
- /usr/local/include/SDL2/SDL_keyboard.h
- /usr/local/include/SDL2/SDL_keycode.h
- /usr/local/include/SDL2/SDL_loadso.h
- /usr/local/include/SDL2/SDL_log.h
- /usr/local/include/SDL2/SDL_main.h
- /usr/local/include/SDL2/SDL_messagebox.h
- /usr/local/include/SDL2/SDL_metal.h
- /usr/local/include/SDL2/SDL_mouse.h
- /usr/local/include/SDL2/SDL_mutex.h
- /usr/local/include/SDL2/SDL_pixels.h
- /usr/local/include/SDL2/SDL_platform.h
- /usr/local/include/SDL2/SDL_power.h
- /usr/local/include/SDL2/SDL_quit.h
- /usr/local/include/SDL2/SDL_rect.h
- /usr/local/include/SDL2/SDL_render.h
- /usr/local/include/SDL2/SDL_rwops.h
- /usr/local/include/SDL2/SDL_scancode.h
- /usr/local/include/SDL2/SDL_sensor.h
- /usr/local/include/SDL2/SDL_shape.h
- /usr/local/include/SDL2/SDL_stdinc.h
- /usr/local/include/SDL2/SDL_surface.h
- /usr/local/include/SDL2/SDL_system.h
- /usr/local/include/SDL2/SDL_thread.h
- /usr/local/include/SDL2/SDL_timer.h
- /usr/local/include/SDL2/SDL_touch.h
- /usr/local/include/SDL2/SDL_ttf.h
- /usr/local/include/SDL2/SDL_version.h
- /usr/local/include/SDL2/SDL_video.h
- /usr/local/include/SDL2/begin_code.h
- /usr/local/include/SDL2/close_code.h
 source/CMakeFiles/BOXOR.dir/player.cpp.o
  ../source/../Box2D/Box2D.h
  ../source/../Box2D/Collision/Shapes/b2ChainShape.h
@@ -309,57 +309,57 @@ source/CMakeFiles/BOXOR.dir/player.cpp.o
  ../source/../Box2D/Dynamics/b2TimeStep.h
  ../source/../Box2D/Dynamics/b2World.h
  ../source/../Box2D/Dynamics/b2WorldCallbacks.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_assert.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_atomic.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_audio.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_blendmode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_clipboard.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_config.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_cpuinfo.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_endian.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_error.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_events.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_filesystem.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_gamecontroller.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_gesture.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_haptic.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_hints.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_joystick.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_keyboard.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_keycode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_loadso.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_log.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_main.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_messagebox.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_metal.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_mouse.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_mutex.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_pixels.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_platform.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_power.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_quit.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_rect.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_render.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_rwops.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_scancode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_sensor.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_shape.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_stdinc.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_surface.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_system.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_thread.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_timer.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_touch.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_version.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_video.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/begin_code.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/close_code.h
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/functions.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/globalvar.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/player.cpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/player.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/world.hpp
- /usr/local/include/SDL2/SDL.h
- /usr/local/include/SDL2/SDL_assert.h
- /usr/local/include/SDL2/SDL_atomic.h
- /usr/local/include/SDL2/SDL_audio.h
- /usr/local/include/SDL2/SDL_blendmode.h
- /usr/local/include/SDL2/SDL_clipboard.h
- /usr/local/include/SDL2/SDL_config.h
- /usr/local/include/SDL2/SDL_cpuinfo.h
- /usr/local/include/SDL2/SDL_endian.h
- /usr/local/include/SDL2/SDL_error.h
- /usr/local/include/SDL2/SDL_events.h
- /usr/local/include/SDL2/SDL_filesystem.h
- /usr/local/include/SDL2/SDL_gamecontroller.h
- /usr/local/include/SDL2/SDL_gesture.h
- /usr/local/include/SDL2/SDL_haptic.h
- /usr/local/include/SDL2/SDL_hints.h
- /usr/local/include/SDL2/SDL_joystick.h
- /usr/local/include/SDL2/SDL_keyboard.h
- /usr/local/include/SDL2/SDL_keycode.h
- /usr/local/include/SDL2/SDL_loadso.h
- /usr/local/include/SDL2/SDL_log.h
- /usr/local/include/SDL2/SDL_main.h
- /usr/local/include/SDL2/SDL_messagebox.h
- /usr/local/include/SDL2/SDL_metal.h
- /usr/local/include/SDL2/SDL_mouse.h
- /usr/local/include/SDL2/SDL_mutex.h
- /usr/local/include/SDL2/SDL_pixels.h
- /usr/local/include/SDL2/SDL_platform.h
- /usr/local/include/SDL2/SDL_power.h
- /usr/local/include/SDL2/SDL_quit.h
- /usr/local/include/SDL2/SDL_rect.h
- /usr/local/include/SDL2/SDL_render.h
- /usr/local/include/SDL2/SDL_rwops.h
- /usr/local/include/SDL2/SDL_scancode.h
- /usr/local/include/SDL2/SDL_sensor.h
- /usr/local/include/SDL2/SDL_shape.h
- /usr/local/include/SDL2/SDL_stdinc.h
- /usr/local/include/SDL2/SDL_surface.h
- /usr/local/include/SDL2/SDL_system.h
- /usr/local/include/SDL2/SDL_thread.h
- /usr/local/include/SDL2/SDL_timer.h
- /usr/local/include/SDL2/SDL_touch.h
- /usr/local/include/SDL2/SDL_version.h
- /usr/local/include/SDL2/SDL_video.h
- /usr/local/include/SDL2/begin_code.h
- /usr/local/include/SDL2/close_code.h
 source/CMakeFiles/BOXOR.dir/world.cpp.o
  ../source/../Box2D/Box2D.h
  ../source/../Box2D/Collision/Shapes/b2ChainShape.h
@@ -398,53 +398,53 @@ source/CMakeFiles/BOXOR.dir/world.cpp.o
  ../source/../Box2D/Dynamics/b2TimeStep.h
  ../source/../Box2D/Dynamics/b2World.h
  ../source/../Box2D/Dynamics/b2WorldCallbacks.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_assert.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_atomic.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_audio.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_blendmode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_clipboard.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_config.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_cpuinfo.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_endian.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_error.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_events.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_filesystem.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_gamecontroller.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_gesture.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_haptic.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_hints.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_joystick.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_keyboard.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_keycode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_loadso.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_log.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_main.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_messagebox.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_metal.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_mouse.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_mutex.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_pixels.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_platform.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_power.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_quit.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_rect.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_render.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_rwops.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_scancode.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_sensor.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_shape.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_stdinc.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_surface.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_system.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_thread.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_timer.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_touch.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_version.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/SDL_video.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/begin_code.h
+ /Users/joshli/gaims/arcade/boxor/v1.1.4/source/SDL2/close_code.h
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/functions.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/globalvar.hpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/world.cpp
  /Users/joshli/gaims/arcade/boxor/v1.1.4/source/world.hpp
- /usr/local/include/SDL2/SDL.h
- /usr/local/include/SDL2/SDL_assert.h
- /usr/local/include/SDL2/SDL_atomic.h
- /usr/local/include/SDL2/SDL_audio.h
- /usr/local/include/SDL2/SDL_blendmode.h
- /usr/local/include/SDL2/SDL_clipboard.h
- /usr/local/include/SDL2/SDL_config.h
- /usr/local/include/SDL2/SDL_cpuinfo.h
- /usr/local/include/SDL2/SDL_endian.h
- /usr/local/include/SDL2/SDL_error.h
- /usr/local/include/SDL2/SDL_events.h
- /usr/local/include/SDL2/SDL_filesystem.h
- /usr/local/include/SDL2/SDL_gamecontroller.h
- /usr/local/include/SDL2/SDL_gesture.h
- /usr/local/include/SDL2/SDL_haptic.h
- /usr/local/include/SDL2/SDL_hints.h
- /usr/local/include/SDL2/SDL_joystick.h
- /usr/local/include/SDL2/SDL_keyboard.h
- /usr/local/include/SDL2/SDL_keycode.h
- /usr/local/include/SDL2/SDL_loadso.h
- /usr/local/include/SDL2/SDL_log.h
- /usr/local/include/SDL2/SDL_main.h
- /usr/local/include/SDL2/SDL_messagebox.h
- /usr/local/include/SDL2/SDL_metal.h
- /usr/local/include/SDL2/SDL_mouse.h
- /usr/local/include/SDL2/SDL_mutex.h
- /usr/local/include/SDL2/SDL_pixels.h
- /usr/local/include/SDL2/SDL_platform.h
- /usr/local/include/SDL2/SDL_power.h
- /usr/local/include/SDL2/SDL_quit.h
- /usr/local/include/SDL2/SDL_rect.h
- /usr/local/include/SDL2/SDL_render.h
- /usr/local/include/SDL2/SDL_rwops.h
- /usr/local/include/SDL2/SDL_scancode.h
- /usr/local/include/SDL2/SDL_sensor.h
- /usr/local/include/SDL2/SDL_shape.h
- /usr/local/include/SDL2/SDL_stdinc.h
- /usr/local/include/SDL2/SDL_surface.h
- /usr/local/include/SDL2/SDL_system.h
- /usr/local/include/SDL2/SDL_thread.h
- /usr/local/include/SDL2/SDL_timer.h
- /usr/local/include/SDL2/SDL_touch.h
- /usr/local/include/SDL2/SDL_version.h
- /usr/local/include/SDL2/SDL_video.h
- /usr/local/include/SDL2/begin_code.h
- /usr/local/include/SDL2/close_code.h
