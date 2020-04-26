@@ -11,6 +11,12 @@ cd build
 cmake ..
 make install
 ```
+
+If cmake is not install, it is recommended to use Homebrew:
+```
+brew install cmake
+```
+
 ## More info
 
 see boxor.org for some messy details
