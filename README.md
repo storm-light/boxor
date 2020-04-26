@@ -11,3 +11,6 @@ cd build
 cmake ..
 make install
 ```
+## More info
+
+see boxor.org for some messy details
